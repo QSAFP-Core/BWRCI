@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recommend a Testbed Nation — BWRCI</title>
+  <meta name="description" content="Recommend a nation for the People's Autonomous Economy testbed. Technology is enabling the world to change. The wealth of nations belongs to the people." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Global Testbed Programme</span>
+    <h1>Recommend<br/><em>a Nation</em></h1>
+  </div>
+</section>
+
+<section class="nations-section">
+  <div class="container">
+    <div class="nations-form-wrap">
+
+      <div class="nations-context">
+        <span class="eyebrow">The Mandate</span>
+        <h2 class="section-title">Technology is enabling the world to <em>change in significant ways</em></h2>
+        <p>The Wealth of Nations belongs to the people of each nation, first. Now there are new technological methods and systems to ensure "We the People" are included within the macroeconomic growth equation — without speculation.</p>
+        <p>It is understandable that citizens of many nations will desire this option. Technology moves quickly, and while your nation may not qualify today, it will not be long before it will.</p>
+        <p>Fill out the form with your recommendation and tell us why we should prioritize it. We will conduct a thorough investigation and respond with our findings.</p>
+
+        <blockquote>
+          "Revolutionizing capitalism would not necessarily mean dismantling it, but rather evolving it into a system that better aligns with the needs of people and the planet in the 21st century."
+          <cite>— G.T. Sage, OpenAI · ChatGPT</cite>
+        </blockquote>
+
+        <div style="margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div style="background:var(--navy-2);border:1px solid var(--border-dim);border-radius:var(--r);padding:20px;">
+            <p style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:8px;">Criteria Considered</p>
+            <p style="font-size:0.85rem;color:var(--white-dim);line-height:1.6;">Digital infrastructure readiness, regulatory openness, economic inclusion need, population engagement capacity</p>
+          </div>
+          <div style="background:var(--navy-2);border:1px solid var(--border-dim);border-radius:var(--r);padding:20px;">
+            <p style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:8px;">What Testbeds Receive</p>
+            <p style="font-size:0.85rem;color:var(--white-dim);line-height:1.6;">PAE SaaS deployment, CETEs pilot programme, QSAFP + AEGES security infrastructure, coalition support</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <span class="eyebrow">Submit Your Recommendation</span>
+        <h3 style="font-family:var(--font-display);font-size:1.8rem;color:var(--white);margin-bottom:28px;">Recommend a Testbed Nation</h3>
+        <p style="color:var(--white-dim);font-size:0.9rem;margin-bottom:28px;font-weight:300;">Be sure to tell us why we should prioritize your recommendation.</p>
+
+        <form class="bwrci-form" action="https://formspree.io/f/xaqjddlp" method="POST">
+          <input type="hidden" name="_subject" value="BWRCI — Nation Recommendation" />
+
+          <label for="rec-name">Your Name</label>
+          <input type="text" id="rec-name" name="name" placeholder="Full name" required />
+
+          <label for="rec-email">Email Address *</label>
+          <input type="email" id="rec-email" name="email" placeholder="your@email.com" required />
+
+          <label for="rec-nation">Nation You're Recommending</label>
+          <input type="text" id="rec-nation" name="nation" placeholder="Country name" required />
+
+          <label for="rec-why">Why should we prioritize this nation?</label>
+          <textarea id="rec-why" name="message" placeholder="Tell us about the economic landscape, digital readiness, population need, and why this nation should be a priority testbed for the PAE..." required></textarea>
+
+          <button type="submit" class="btn btn-gold" style="width:100%;text-align:center;">Submit Recommendation →</button>
+        </form>
+
+        <div style="margin-top:24px;padding:16px 20px;background:var(--navy-2);border:1px solid var(--border-dim);border-radius:var(--r);">
+          <p style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--white-muted);">B.W.R.C.I. — The wealth of nations belongs to the people of each nation, first.</p>
+          <p style="font-size:0.8rem;color:var(--white-muted);margin-top:6px;">Chicago, Illinois, United States · <a href="mailto:info@bwrci.org" style="color:var(--gold-dim);">info@bwrci.org</a></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="js/main.js"></script>
+</body>
+</html>

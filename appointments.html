@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Appointments — BWRCI</title>
+  <meta name="description" content="Book an appointment with BWRCI. Schedule a QSAFP demo, AEGES briefing, or PAE consultation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Schedule a Meeting</span>
+    <h1>Online<br/><em>Appointments</em></h1>
+  </div>
+</section>
+
+<section class="appointments-section">
+  <div class="container">
+
+    <div style="display:grid;grid-template-columns:1fr 2fr;gap:72px;align-items:start;" class="about-grid">
+
+      <div>
+        <span class="eyebrow">What We Offer</span>
+        <h2 class="section-title" style="font-size:2rem;">Book a <em>Consultation</em></h2>
+
+        <div style="display:flex;flex-direction:column;gap:16px;margin-top:8px;">
+          <div style="padding:20px;background:var(--navy);border:1px solid var(--border-dim);border-radius:var(--r);border-left:2px solid var(--gold);">
+            <p style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">QSAFP Demo</p>
+            <p style="font-size:0.88rem;color:var(--white-dim);">Live walkthrough of the QVN Validator Network — see human-AI governance in action.</p>
+          </div>
+          <div style="padding:20px;background:var(--navy);border:1px solid var(--border-dim);border-radius:var(--r);border-left:2px solid var(--gold);">
+            <p style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">AEGES Briefing</p>
+            <p style="font-size:0.88rem;color:var(--white-dim);">Technical deep-dive on quantum-resistant asset protection and economic quarantine architecture.</p>
+          </div>
+          <div style="padding:20px;background:var(--navy);border:1px solid var(--border-dim);border-radius:var(--r);border-left:2px solid var(--gold);">
+            <p style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">PAE Consultation</p>
+            <p style="font-size:0.88rem;color:var(--white-dim);">Strategic discussion on People's Autonomous Economy deployment for your nation or organisation.</p>
+          </div>
+          <div style="padding:20px;background:var(--navy);border:1px solid var(--border-dim);border-radius:var(--r);border-left:2px solid var(--gold);">
+            <p style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">Partnership Discussion</p>
+            <p style="font-size:0.88rem;color:var(--white-dim);">Explore coalition membership, testbed nation programmes, or open-core collaboration.</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <!-- CALENDLY PLACEHOLDER -->
+        <div class="calendly-placeholder">
+          <span class="eyebrow" style="display:block;margin-bottom:16px;">Scheduling</span>
+          <p style="font-family:var(--font-display);font-size:1.4rem;color:var(--white);margin-bottom:16px;">Calendly Booking Widget</p>
+          <p>To activate online booking, create a free <a href="https://calendly.com" target="_blank" style="color:var(--gold);text-decoration:underline;">Calendly</a> account, set up your appointment types, then replace this block with your Calendly embed code:</p>
+          <div style="background:var(--navy-2);border:1px dashed var(--gold-dim);border-radius:var(--r);padding:20px;margin:20px 0;text-align:left;">
+            <p style="font-family:var(--font-mono);font-size:11px;color:var(--gold);margin-bottom:8px;">Your embed code will look like:</p>
+            <code style="font-family:var(--font-mono);font-size:10px;color:var(--white-muted);line-height:1.8;display:block;">
+              &lt;!-- Calendly inline widget --&gt;<br/>
+              &lt;div class="calendly-inline-widget"<br/>
+              &nbsp;&nbsp;data-url="https://calendly.com/<strong style="color:var(--gold);">YOUR-USERNAME</strong>"<br/>
+              &nbsp;&nbsp;style="min-width:320px;height:700px;"&gt;&lt;/div&gt;<br/>
+              &lt;script src="https://assets.calendly.com/assets/<br/>
+              &nbsp;&nbsp;external/widget.js" async&gt;&lt;/script&gt;
+            </code>
+          </div>
+          <p class="calendly-note">Calendly free tier supports unlimited 1:1 meetings · No credit card required</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FALLBACK -->
+<section style="padding:0 0 80px;background:var(--midnight);">
+  <div class="container" style="max-width:640px;text-align:center;">
+    <p style="color:var(--white-dim);font-size:0.95rem;margin-bottom:24px;font-weight:300;">Prefer to reach us directly? Send a message and we will arrange a time that works.</p>
+    <a href="mailto:info@bwrci.org?subject=Appointment Request" class="btn btn-outline">Email to Schedule →</a>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="js/main.js"></script>
+</body>
+</html>
