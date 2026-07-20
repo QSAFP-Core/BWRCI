@@ -1,0 +1,1853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BWRCI — The Better World Regulatory Coalition Inc.</title>
+  <meta name="description" content="National Autonomous Economies SaaS Testbeds. Because the wealth of nations belongs to the people of each nation, first." />
+  <meta property="og:title" content="The Better World Regulatory Coalition Inc." />
+  <meta property="og:description" content="Because the wealth of nations belongs to the people of each nation, first. 🎯" />
+  <meta property="og:image" content="https://img1.wsimg.com/isteam/ip/75f5b0fa-4cdc-4ad1-ad94-58e64e0039f5/MAIN-BWRCI.png" />
+  <meta property="og:url" content="https://bwrci.org/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@bwrci_qsafp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+  /* ── HERO PRESENTS CARD ── */
+.hero-body {
+  max-width: 100% !important;
+  padding-right: 32px;        /* clean border off the browser edge */
+}
+.hero-crest {
+  flex: 1 1 1000px;
+  flex-grow: 999;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 1;
+  align-self: flex-start;
+  padding-top: 150px;
+}
+.hero-crest img {
+  width: 100%;
+  max-width: 780px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 22px;
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.55),
+    0 0 0 1px rgba(201,168,76,0.18),
+    0 0 90px rgba(201,168,76,0.16);
+  filter: drop-shadow(0 0 50px rgba(201,168,76,0.22));
+  animation: crest-glow 4s ease-in-out infinite;
+  display: block;
+  margin: 0 0 0 auto;
+}
+@keyframes crest-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 50px rgba(201,168,76,0.20));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 80px rgba(201,168,76,0.38));
+    transform: scale(1.01);
+  }
+}
+
+    /* ── VTCNZE CARD (4th pillar — distinct teal accent) ── */
+    .protocol-card--vtcnze::before { background: var(--teal) !important; }
+    .protocol-card--vtcnze:hover { background: #0e1e20; }
+    .vtcnze-tag { color: var(--teal) !important; }
+
+    /* ── 4-col protocols grid ── */
+    .protocols-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+      background: var(--border-dim);
+      border: 1px solid var(--border-dim);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+    }
+    @media (max-width: 1100px) {
+      .protocols-grid-4 { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 900px) {
+      .hero-crest img { max-width: 420px; }
+    }
+    @media (max-width: 640px) {
+      .protocols-grid-4 { grid-template-columns: 1fr; }
+      .hero-crest img { max-width: 90vw; border-radius: 16px; }
+    }
+
+    /* ── VTCNZE SECTION ── */
+    .vtcnze-section {
+      padding: 100px 0;
+      background: #060e0e;
+      border-top: 1px solid rgba(26,188,156,0.15);
+      border-bottom: 1px solid rgba(26,188,156,0.15);
+      position: relative;
+      overflow: hidden;
+    }
+    .vtcnze-section::before {
+      content: '';
+      position: absolute;
+      top: -120px; right: -120px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(26,188,156,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .vtcnze-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: start;
+    }
+    @media (max-width: 960px) {
+      .vtcnze-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+    .vtcnze-stat-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 32px;
+    }
+    .vtcnze-stat {
+      background: rgba(26,188,156,0.06);
+      border: 1px solid rgba(26,188,156,0.18);
+      border-radius: var(--r);
+      padding: 16px 20px;
+    }
+    .vtcnze-stat-num {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--teal);
+      display: block;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .vtcnze-stat-label {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(26,188,156,0.6);
+      display: block;
+    }
+    .vtcnze-feature {
+      display: flex;
+      gap: 14px;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(26,188,156,0.1);
+    }
+    .vtcnze-feature:last-child { border-bottom: none; }
+    .vtcnze-feature-icon {
+      font-size: 1.3rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .vtcnze-feature h4 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .vtcnze-feature p {
+      font-size: 0.87rem;
+      color: var(--white-dim);
+      line-height: 1.65;
+    }
+    .btn-teal {
+      background: var(--teal);
+      color: var(--midnight);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 13px 28px;
+      border-radius: var(--r);
+      font-weight: 700;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+    .btn-teal:hover { background: #22f0d4; transform: translateY(-1px); }
+    .btn-teal-outline {
+      background: transparent;
+      color: var(--teal);
+      border: 1px solid rgba(26,188,156,0.35);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 13px 28px;
+      border-radius: var(--r);
+      display: inline-block;
+      transition: all 0.2s;
+    }
+    .btn-teal-outline:hover { border-color: var(--teal); background: rgba(26,188,156,0.08); }
+
+    /* ── MISSION BAND 4-col ── */
+    .mission-band-4 .container {
+      grid-template-columns: repeat(4, 1fr) !important;
+    }
+    @media (max-width: 960px) {
+      .mission-band-4 .container { grid-template-columns: repeat(2,1fr) !important; }
+    }
+    @media (max-width: 600px) {
+      .mission-band-4 .container { grid-template-columns: 1fr !important; }
+    }
+    .mission-pillar--vtcnze {
+      border-left: 2px solid rgba(26,188,156,0.3);
+    }
+    .mission-pillar--vtcnze h3 { color: #9efff0; }
+    .mission-pillar--vtcnze p { color: rgba(26,188,156,0.75); }
+
+
+    /* ── QVN / QSAFP INSERTED LEGACY SECTIONS ── */
+    .qvn-showcase-section {
+      padding: 90px 0;
+      background: #020407;
+      border-top: 1px solid rgba(0,255,255,0.10);
+      border-bottom: 1px solid rgba(201,168,76,0.10);
+    }
+    .qvn-showcase-section:nth-of-type(even) { background: #08090f; }
+    .qvn-showcase-head {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 28px;
+    }
+    .qvn-showcase-title {
+      font-family: var(--font-display);
+      color: var(--white);
+      font-size: clamp(1.45rem, 3vw, 2.2rem);
+      font-weight: 600;
+      letter-spacing: .03em;
+      margin-bottom: 10px;
+    }
+    .qvn-showcase-title em { color: #9efff0; font-style: italic; }
+    .qvn-showcase-kicker {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: #18f5de;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .qvn-embed-frame {
+      display: block;
+      width: min(980px, 92vw);
+      height: 460px;
+      margin: 0 auto;
+      border: 1px solid rgba(0,255,255,0.18);
+      border-radius: var(--r-lg);
+      box-shadow: 0 25px 70px rgba(0,0,0,.45), 0 0 60px rgba(0,255,255,.06);
+      background: #000;
+      overflow: hidden;
+    }
+    .qvn-embed-frame--wide { width: min(1120px, 94vw); height: 580px; }
+    .qvn-embed-frame--demo { width: min(980px, 94vw); height: 560px; }
+
+    .qvn-section-hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw, 4.3rem);
+      line-height: 0.96;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      margin: 0 0 18px;
+    }
+    .qvn-section-hero-title em {
+      color: #9efff0;
+      font-style: italic;
+      font-weight: 600;
+    }
+    .qvn-section-subtitle {
+      color: var(--white-dim);
+      font-size: 1rem;
+      line-height: 1.75;
+      max-width: 760px;
+      margin: 0 auto;
+      font-weight: 300;
+    }
+    .qvn-demo-guidance {
+      max-width: 780px;
+      margin: -8px auto 30px;
+      color: var(--white-dim);
+      font-family: var(--font-mono);
+      font-size: 0.92rem;
+      line-height: 1.8;
+      text-align: left;
+      background: rgba(0,0,0,0.28);
+      border: 1px solid rgba(0,255,255,0.12);
+      border-radius: var(--r-lg);
+      padding: 24px 28px;
+    }
+    .qvn-demo-guidance strong {
+      display: block;
+      color: var(--white);
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      letter-spacing: 0.01em;
+      margin-bottom: 12px;
+    }
+    .qvn-demo-guidance ol {
+      margin: 0 0 18px 1.25rem;
+      padding: 0;
+    }
+    .qvn-demo-guidance li { margin: 3px 0; }
+    .qvn-demo-guidance .qvn-demo-closing {
+      color: var(--white);
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 1.45;
+      margin: 0;
+    }
+    @media (max-width: 700px) {
+      .qvn-showcase-section { padding: 64px 0; }
+      .qvn-embed-frame { height: 360px; }
+      .qvn-embed-frame--wide { height: 420px; }
+      .qvn-embed-frame--demo { height: 500px; }
+    }
+
+  </style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<!-- HERO -->
+<section class="home-hero">
+  <div class="hero-ticker">
+    <div class="ticker-track">
+      <span>This is not a think tank. It's a build tank.</span>
+      <span>·</span>
+      <span>The wealth of nations belongs to the people of each nation, first</span>
+      <span>·</span>
+      <span>Etching humanity's veto into silicon</span>
+      <span>·</span>
+      <span>National Autonomous Economies · SaaS Testbeds</span>
+      <span>·</span>
+      <span>VTCNZE · Stacking the Future of Energy</span>
+      <span>·</span>
+      <span>When the timing is right — we go open-core</span>
+      <span>·</span>
+      <span>This is not a think tank. It's a build tank.</span>
+      <span>·</span>
+      <span>The wealth of nations belongs to the people of each nation, first</span>
+      <span>·</span>
+      <span>Etching humanity's veto into silicon</span>
+      <span>·</span>
+      <span>National Autonomous Economies · SaaS Testbeds</span>
+      <span>·</span>
+      <span>VTCNZE · Stacking the Future of Energy</span>
+      <span>·</span>
+      <span>When the timing is right — we go open-core</span>
+      <span>·</span>
+    </div>
+  </div>
+
+  <div class="hero-body" style="justify-content:space-between;gap:48px;align-items:center;">
+    <div class="hero-text" style="display:flex;flex-direction:column;justify-content:center;flex:1 1 1000px;max-width:100%;">
+      <div class="hero-flag">
+        <span class="hero-flag-line"></span>
+        <span class="hero-flag-text">National Autonomous Economies · SaaS Testbeds</span>
+      </div>
+
+      <h1 class="hero-title">
+        Better World<br/>
+        <em>Regulatory Coalition</em>
+      </h1>
+
+      <p class="hero-mandate">
+        Because the wealth of nations belongs to the people of each nation, first.
+        A global alliance building the infrastructure of shared prosperity.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="recommend.html" class="btn btn-gold btn-lg">Recommend a Testbed Nation</a>
+        <a href="https://scheduler.zoom.us/maxbruce-max-d/max_remotes" target="_blank" rel="noopener" class="btn btn-outline btn-lg">Book an Appointment</a>
+        <a href="qsafp.html" class="btn btn-ghost btn-lg">Explore QSAFP</a>
+      </div>
+
+      <div class="hero-stats">
+        <div>
+          <span class="hero-stat-num">4</span>
+          <span class="hero-stat-label">Active Protocols</span>
+        </div>
+        <div>
+          <span class="hero-stat-num">PAE</span>
+          <span class="hero-stat-label">People's Autonomous Economy</span>
+        </div>
+        <div>
+          <span class="hero-stat-num">Open</span>
+          <span class="hero-stat-label">Core Architecture</span>
+        </div>
+        <div>
+          <span class="hero-stat-num">∞</span>
+          <span class="hero-stat-label">Nations Eligible</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- BWRCI CREST -->
+    <div class="hero-crest">
+      <img src="bwrci-presents-card.png" alt="BWRCI.ORG — The Better World Regulatory Coalition Inc." />
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <span class="eyebrow">About BWRCI</span>
+        <h2 class="section-title">Founded on the principle that <em>intelligence and wealth</em> should be widely distributed</h2>
+        <p>BWRCI is founded on the principle that when intelligence and wealth are securely and widely distributed, humanity gains unprecedented capacity to comprehend and improve our world.</p>
+        <p>From AI fail-safes and quantum-resilient security to digital equity markets and sovereign-safe economic architectures, BWRCI believes in a global alliance of innovators, institutions, and communities toward a more accountable, inclusive, and prosperous world.</p>
+        <p><strong>BWRCI's mission</strong> is to enable people to monetize their consumption of goods and services using blockchain contracts and CETEs — creating a self-perpetuating, virtuous economy of consumption and growth without speculation.</p>
+        <p>We pledge to empower business entities with innovative technological tools that promote fierce loyalties among consumers while producing stronger, more responsible communities by better incentivizing mutually beneficial goals.</p>
+        <div style="display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;">
+          <a href="https://img1.wsimg.com/blobby/go/75f5b0fa-4cdc-4ad1-ad94-58e64e0039f5/BWRCI-SitePDF%20(1)-8fc0cce.pdf" class="btn btn-download" target="_blank" download>
+            📄 PAE Overview PDF
+          </a>
+          <a href="https://img1.wsimg.com/blobby/go/75f5b0fa-4cdc-4ad1-ad94-58e64e0039f5/CETEs-BWRCI-SitePDF.pdf" class="btn btn-download" target="_blank" download>
+            📄 CETEs Overview PDF
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="about-quote" style="margin-bottom:20px;">
+          <blockquote>"This would indeed represent one of the most significant economic innovations since the creation of modern banking and fiat currency systems. It doesn't abolish capitalism but evolves it into a more inclusive, stable, and equitable form."</blockquote>
+          <cite>— Claude, Anthropic AI</cite>
+        </div>
+        <div class="about-quote">
+          <blockquote>"This is the economic holy grail many have searched for, but few have conceptualized so elegantly."</blockquote>
+          <cite>— Claude, Anthropic AI</cite>
+        </div>
+        <div style="margin-top:20px;">
+          <img
+            src="https://img1.wsimg.com/isteam/ip/75f5b0fa-4cdc-4ad1-ad94-58e64e0039f5/Tetralogy-1.png"
+            alt="The Tetralogy — BWRCI AI Collaboration"
+            style="border-radius:var(--r-lg);border:1px solid var(--border-dim);width:100%;"
+          />
+          <p style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--white-muted);margin-top:10px;text-align:center;">
+            The Tetralogy — <a href="http://aicomsci.org" target="_blank" style="color:var(--gold-dim);">aicomsci.org</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROTOCOLS — 4 pillars -->
+<section class="protocols-section">
+  <div class="container">
+    <span class="eyebrow">Core Protocols</span>
+    <h2 class="section-title">Four pillars. One mission.</h2>
+    <p class="section-intro">Open-core infrastructure spanning economic participation, AI governance, asset protection, and clean energy infrastructure.</p>
+
+    <div class="protocols-grid-4">
+      <div class="protocol-card">
+        <span class="protocol-icon">🔷</span>
+        <span class="protocol-tag">Economic Framework</span>
+        <h3>PAE / CETEs</h3>
+        <p>The People's Autonomous Economy rewards everyday consumption with economic participation. Families do not merely spend into the system — they earn a stake in the growth their demand helps create. Wealth circulates. Trust compounds. Local economies begin to thrive as they become more self-reliant and self-perpetuating.</p>
+        <p style="margin-top:8px;"><strong style="color:var(--white);">CETEs</strong> — Consumer Earned Tokenized Equities — provide the non-speculative on-ramp: earned through participation, held with discipline, and designed for shared prosperity.</p>
+        <div class="protocol-links">
+          <a href="https://pielogic.com" target="_blank">Inclusionism: Finally! →</a>
+          <a href="https://img1.wsimg.com/blobby/go/75f5b0fa-4cdc-4ad1-ad94-58e64e0039f5/BWRCI-SitePDF%20(1)-8fc0cce.pdf" target="_blank" download>Download PAE PDF →</a>
+        </div>
+      </div>
+
+      <div class="protocol-card">
+        <span class="protocol-icon">🔐</span>
+        <span class="protocol-tag">Security Protocol</span>
+        <h3>AEGES / OCUP</h3>
+        <p>AEGES is asset protection with consequences. It makes theft economically futile by tracing value, locking corrupted paths, and preserving evidence after an attack. Not just a vault — a deterrence layer for the economy we are building.</p>
+        <p style="margin-top:8px;">If digital wealth is going to circulate at national scale, it needs armor that still matters after breach. AEGES protects the trust layer.</p>
+        <div class="protocol-links">
+          <a href="aeges.html">Full AEGES Page →</a>
+          <a href="http://getaeges.org" target="_blank">getaeges.org →</a>
+          <a href="https://github.com/AEGES-OPEN-CORE/AEGES" target="_blank">GitHub →</a>
+        </div>
+      </div>
+
+      <div class="protocol-card">
+        <span class="protocol-icon">🧠</span>
+        <span class="protocol-tag">AI Governance Protocol</span>
+        <h3>QSAFP / OCUP</h3>
+        <p>Temporal authority for AI and robotics. Autonomous systems receive bounded permission to operate, then must return to human-governed checkpoints. They cannot self-authorize, self-extend, or outrun the lease.</p>
+        <p style="margin-top:8px;">This is not monitoring. It is runtime authority: the line between useful autonomy and systems that keep going without us.</p>
+        <div class="protocol-links">
+          <a href="qsafp.html">Full QSAFP Page →</a>
+          <a href="http://qsafp.org" target="_blank">qsafp.org →</a>
+          <a href="https://github.com/QSAFP-Core/qsafp-open-core" target="_blank">GitHub →</a>
+        </div>
+      </div>
+
+      <div class="protocol-card protocol-card--vtcnze">
+        <span class="protocol-icon">⚡</span>
+        <span class="protocol-tag vtcnze-tag">Clean Energy Infrastructure</span>
+        <h3>VTCNZE</h3>
+        <p>Vertical Stack Technology Coalition For Near-Zero Emissions PBC is energy infrastructure for the AI-load era. VTCNZE places non-flammable sodium-ion storage on urban footprints, turning grid bottlenecks into community-participating power capacity near the load. Host communities are treated like they are 40% equity partners - flipping NIMBY to WIMBY.</p>
+        <p style="margin-top:8px;"><strong style="color:var(--white);">Target:</strong> ≈600 GWh of U.S. storage in ≈48 months, with 40% of profits permanently reserved for host communities. VTCNZE is the vehicle for CETEs to become ubiquitous.</p>
+        <div class="protocol-links">
+          <a href="https://verticalstack.energy" target="_blank" style="color:var(--teal);">verticalstack.energy →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- NO MORE NPCs — INCLUSIONISM YOUTH LANE -->
+<section class="npc-section" id="no-more-npcs" aria-label="No More NPCs slideshow preview" data-slide-interval="5000">
+  <img src="coming-soon-banner.png" alt="Coming soon" class="npc-coming-soon-badge" />
+  <div class="container npc-inner">
+    <div class="npc-stage">
+      <div class="npc-frame">
+        <figure class="npc-slide is-active">
+          <img src="no-more-npcs-uprising.png" alt="No More NPCs uprising cover" />
+        </figure>
+        <figure class="npc-slide">
+          <img src="no-more-npcs-glitch-awakening.png" alt="No More NPCs glitch awakening cover" />
+        </figure>
+        <figure class="npc-slide">
+          <img src="no-more-npcs-player-select.png" alt="No More NPCs player select cover" />
+        </figure>
+        <figure class="npc-slide">
+          <img src="no-more-npcs-treasure-map.png" alt="No More NPCs treasure map cover" />
+        </figure>
+      </div>
+      <div class="npc-dots" aria-label="No More NPCs slideshow controls"></div>
+    </div>
+
+    <div class="npc-copy">
+      <span class="eyebrow">Second Book Overview</span>
+      <h2 class="npc-title">“No More<br/><em>NPCs”</em></h2>
+      <p class="npc-lede">
+        A youth-facing visual lane for <em>Inclusionism: Finally!</em> — moving from spectator economics to player economics, agency, ownership, and enlightened participation. The first book challenged leadership. This one speaks directly to the next generations. Dare to understand.
+      </p>
+      <div class="npc-actions">
+        <a href="https://pielogic.com/#no-more-npcs" target="_blank" class="btn btn-outline">Preview the Series →</a>
+        <span class="npc-note">4-cover preview · rotates every 5 seconds</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- VTCNZE DEEP DIVE -->
+<section class="vtcnze-section">
+  <div class="container">
+    <div class="vtcnze-grid">
+      <div>
+        <span class="eyebrow" style="color:var(--teal);">New Coalition Member</span>
+        <h2 class="section-title">VTCNZE <em style="color:#9efff0;">—</em><br/>Stacking the Future<br/><em style="color:#9efff0;">of Energy</em></h2>
+        <p style="color:var(--white-dim);font-size:1rem;line-height:1.75;margin-bottom:16px;font-weight:300;">The Vertical Stack Technology Coalition for Near-Zero Emissions is BWRCI's clean energy infrastructure arm — built to solve the grid interconnection crisis facing data centers, utilities, and communities across America.</p>
+        <p style="color:var(--white-dim);font-size:1rem;line-height:1.75;margin-bottom:16px;font-weight:300;">V-Stack towers are patent-pending modular vertical energy storage units deploying non-flammable sodium-ion technology on existing urban footprints. No new land. No combustion. No grid queue delays.</p>
+        <p style="color:var(--white-dim);font-size:1rem;line-height:1.75;font-weight:300;">Governor Pritzker's June 2026 grid emergency declaration — driven by exploding data center load — is exactly the market moment VTCNZE was designed for. Illinois PA 104-0458 (Clean and Reliable Grid Affordability Act) creates the policy runway. VStack fills the gap. https://bit.ly/4oMWN79</p>
+
+        <div class="vtcnze-stat-row">
+          <div class="vtcnze-stat">
+            <span class="vtcnze-stat-num">≈600 GWh</span>
+            <span class="vtcnze-stat-label">U.S. Grid Storage Target</span>
+          </div>
+          <div class="vtcnze-stat">
+            <span class="vtcnze-stat-num">≈48 mo</span>
+            <span class="vtcnze-stat-label">Deployment Timeline</span>
+          </div>
+          <div class="vtcnze-stat">
+            <span class="vtcnze-stat-num">40%</span>
+            <span class="vtcnze-stat-label">Community Profit Share</span>
+          </div>
+          <div class="vtcnze-stat">
+            <span class="vtcnze-stat-num">1.97 GWh</span>
+            <span class="vtcnze-stat-label">Per Tower Capacity</span>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;">
+          <a href="https://verticalstack.energy" target="_blank" class="btn-teal">Visit verticalstack.energy →</a>
+          <a href="https://scheduler.zoom.us/maxbruce-max-d/max_remotes" target="_blank" rel="noopener" class="btn-teal-outline">Partner with VTCNZE →</a>
+        </div>
+      </div>
+
+      <div>
+        <div style="background:rgba(26,188,156,0.04);border:1px solid rgba(26,188,156,0.15);border-radius:var(--r-lg);padding:32px;">
+          <p style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--teal);margin-bottom:20px;">V-Stack Architecture</p>
+
+          <div class="vtcnze-feature">
+            <span class="vtcnze-feature-icon">🏙️</span>
+            <div>
+              <h4>Urban Footprint Deployment</h4>
+              <p>Vertical towers deploy on existing urban land — no greenfield acquisition, no transmission buildout. The Chicago Pillar targets the South Works site as the flagship 30-story deployment.</p>
+            </div>
+          </div>
+          <div class="vtcnze-feature">
+            <span class="vtcnze-feature-icon">🔥</span>
+            <div>
+              <h4>Non-Flammable Sodium-Ion</h4>
+              <p>Unlike lithium-ion alternatives, sodium-ion chemistry is inherently non-flammable — dramatically reducing insurance, permitting, and community opposition barriers.</p>
+            </div>
+          </div>
+          <div class="vtcnze-feature">
+            <span class="vtcnze-feature-icon">⚡</span>
+            <div>
+              <h4>Grid Interconnection Bridge</h4>
+              <p>Data centers face 3–7 year grid queue delays. VStack deploys in ≈6 months post-permits, providing immediate behind-the-meter storage that bypasses the interconnection backlog entirely.</p>
+            </div>
+          </div>
+          <div class="vtcnze-feature">
+            <span class="vtcnze-feature-icon">🤝</span>
+            <div>
+              <h4>Community First Model</h4>
+              <p>40% of profits permanently reserved for host communities. 5% RTD licensing fee. VStack is infrastructure that builds wealth for the neighborhoods it serves — aligned with BWRCI's PAE philosophy.</p>
+            </div>
+          </div>
+          <div class="vtcnze-feature">
+            <span class="vtcnze-feature-icon">🏛️</span>
+            <div>
+              <h4>Policy Aligned</h4>
+              <p>Illinois PA 104-0458 (Clean and Reliable Grid Affordability Act, effective June 1, 2026) and the Governor's grid emergency declaration create the exact regulatory moment VTCNZE was built for.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- QVN / QSAFP OVERSIGHT CONTINUUM -->
+<section class="qvn-showcase-section">
+  <div class="container">
+    <div class="qvn-showcase-head">
+      <h2 class="qvn-section-hero-title">Etching Humanity's Veto<br/><em>Into Silicon</em></h2>
+      <p class="qvn-section-subtitle">Shared prosperity requires shared authority.</p>
+    </div>
+    <iframe class="qvn-embed-frame" title="QVN Inference Oversight — The Continuum" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot; /&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+&lt;title&gt;QVN Inference Oversight — The Continuum&lt;/title&gt;
+&lt;style&gt;
+  html, body { width:100%; height:100%; }
+  body {
+    margin: 0;
+    background: radial-gradient(circle at center, #020617 0%, #000510 100%);
+    overflow: hidden;
+    font-family: &#x27;Orbitron&#x27;, &#x27;Space Mono&#x27;, monospace;
+    color: #00ffff;
+  }
+  canvas { display: block; width:100%; height:100%; }
+  .telemetry {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 1.6em;
+    font-size: clamp(.75rem,1.8vw,1.1em);
+    color: #7ef9ff;
+    background: rgba(0,0,0,0.25);
+    padding: 10px 20px;
+    border-radius: 10px;
+    max-width: calc(100% - 40px);
+  }
+  .caption {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #9efeff;
+    font-size: clamp(.78rem,1.8vw,1.2em);
+    letter-spacing: 0.5px;
+    background: rgba(0,0,0,0.25);
+    padding: 8px 16px;
+    border-radius: 8px;
+    max-width: calc(100% - 32px);
+  }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;canvas id=&quot;qvnCanvas&quot;&gt;&lt;/canvas&gt;
+  &lt;div class=&quot;telemetry&quot; id=&quot;telemetry&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;caption&quot; id=&quot;caption&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+const canvas = document.getElementById(&#x27;qvnCanvas&#x27;);
+const ctx = canvas.getContext(&#x27;2d&#x27;);
+let w, h, t = 0;
+function resize() {
+  w = canvas.width = window.innerWidth;
+  h = canvas.height = window.innerHeight;
+}
+window.addEventListener(&#x27;resize&#x27;, resize);
+resize();
+
+const telemetry = document.getElementById(&#x27;telemetry&#x27;);
+const caption = document.getElementById(&#x27;caption&#x27;);
+
+function drawCore(r) {
+  const grad = ctx.createRadialGradient(0, 0, r * 0.2, 0, 0, r);
+  grad.addColorStop(0, &#x27;#00ffff&#x27;);
+  grad.addColorStop(1, &#x27;rgba(0,255,255,0)&#x27;);
+  ctx.fillStyle = grad;
+  ctx.beginPath();
+  ctx.arc(0, 0, r, 0, Math.PI * 2);
+  ctx.fill();
+}
+
+function drawValidator(angle, orbitR, pulse) {
+  const x = Math.cos(angle) * orbitR;
+  const y = Math.sin(angle) * orbitR;
+  ctx.beginPath();
+  ctx.fillStyle = `rgba(0,255,255,${0.8 + 0.2*Math.sin(pulse)})`;
+  ctx.arc(x, y, 8, 0, Math.PI * 2);
+  ctx.fill();
+  return {x,y};
+}
+
+function animate() {
+  ctx.save();
+  ctx.clearRect(0,0,w,h);
+  ctx.translate(w/2,h/2);
+  const time = Date.now()*0.001;
+
+  drawCore(60 + 10*Math.sin(time*0.5));
+
+  const validatorCount = 6;
+  const orbitR = Math.min(w,h) * 0.27 + 5*Math.sin(time*0.8);
+  let validatorPositions = [];
+  for (let i=0;i&lt;validatorCount;i++) {
+    const angle = (i/validatorCount)*Math.PI*2 + time*0.2;
+    validatorPositions.push(drawValidator(angle, orbitR, time*2+i));
+  }
+
+  ctx.beginPath();
+  ctx.strokeStyle = `rgba(255,215,0,${0.3+0.2*Math.sin(time)})`;
+  ctx.lineWidth = 3;
+  ctx.arc(0,0,orbitR+20,0,Math.PI*2);
+  ctx.stroke();
+
+  ctx.lineWidth = 1;
+  ctx.strokeStyle = &#x27;rgba(0,255,255,0.2)&#x27;;
+  ctx.beginPath();
+  for (let i=0;i&lt;validatorCount;i++){
+    const v = validatorPositions[i];
+    ctx.moveTo(0,0);
+    ctx.lineTo(v.x,v.y);
+  }
+  ctx.stroke();
+
+  const metrics = [
+    `Inference Cycle: ACTIVE`,
+    `Validator Consensus: TRUE (6/6)`,
+    `Human Quorum: 3/5`,
+    `Latency: &lt;0.9 ms`,
+    `Validator Health: OPTIMAL`
+  ];
+  const metricIndex = Math.floor(time % metrics.length);
+  telemetry.innerText = metrics[metricIndex];
+
+  const captions = [
+    &#x27;Inference layer live — outputs in motion.&#x27;,
+    &#x27;Validator quorum synchronized — every output authenticated.&#x27;,
+    &#x27;Human oversight confirmed — sovereignty retained.&#x27;,
+    &#x27;Anomaly reconciled in real time — inference continues safely.&#x27;,
+    &#x27;Safety as a constant state — trust in motion.&#x27;
+  ];
+  const captionIndex = Math.floor(time/4) % captions.length;
+  caption.innerText = captions[captionIndex];
+
+  ctx.restore();
+  requestAnimationFrame(animate);
+}
+animate();
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;" loading="lazy"></iframe>
+  </div>
+</section>
+
+<!-- QVN COSMIC CIRCULATION -->
+<section class="qvn-showcase-section">
+  <div class="container">
+    <div class="qvn-showcase-head">
+      <h2 class="qvn-section-hero-title">QSAFP Validator<br/><em>Network</em></h2>
+      <p class="qvn-section-subtitle">QVN is empowering humanity over AI.</p>
+    </div>
+    <iframe class="qvn-embed-frame qvn-embed-frame--wide" title="QVN Cosmic Circulation — AI Revenue Core Flow" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot; /&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;
+&lt;title&gt;QVN Cosmic Circulation — AI Revenue Core Flow&lt;/title&gt;
+&lt;style&gt;
+  :root{ --bg:#060712; --rev:#ffd166; --qsf:#66d0ff; --ai:#ff6b6b; --val:#7cffb2; --wallet:#fb8bff; --trust:#8cff66; }
+  html,body{height:100%; margin:0; background:radial-gradient(1000px at 70% -10%, #122 0%, var(--bg) 70%); color:#eee; font-family:Segoe UI, sans-serif; overflow:hidden;}
+  header{padding:14px 20px; font-weight:600; text-align:center; letter-spacing:.2px; font-size:clamp(.8rem,2vw,1rem);}
+  svg{width:min(1200px,98vw); height:calc(100% - 50px); display:block; margin:auto;}
+  .label{font-size:13px; font-weight:600; text-shadow:0 1px 2px #000a;}
+  .soft{font-size:11px; opacity:.8}
+  .flow{stroke-linecap:round; stroke-dasharray:10 14; animation:dash 8s linear infinite}
+  @keyframes dash{to{stroke-dashoffset:-600}}
+  .orbit{stroke:rgba(255,255,255,.12)}
+  .node{filter:drop-shadow(0 0 6px rgba(255,255,255,.3))}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header&gt;QVN Cosmic Circulation — AI Revenue → QSAFP/QVN → People → Back to AI&lt;/header&gt;
+&lt;svg viewBox=&quot;0 0 1200 720&quot; role=&quot;img&quot;&gt;
+  &lt;g transform=&quot;translate(400,360)&quot;&gt;
+    &lt;circle r=&quot;120&quot; fill=&quot;var(--ai)&quot; opacity=&quot;.9&quot; class=&quot;node&quot;/&gt;
+    &lt;text text-anchor=&quot;middle&quot; y=&quot;5&quot; class=&quot;label&quot;&gt;AI REVENUES&lt;/text&gt;
+    &lt;text text-anchor=&quot;middle&quot; y=&quot;28&quot; class=&quot;soft&quot;&gt;Massive inflows&lt;/text&gt;
+  &lt;/g&gt;
+  &lt;g transform=&quot;translate(800,360)&quot;&gt;
+    &lt;circle r=&quot;90&quot; fill=&quot;var(--qsf)&quot; opacity=&quot;.95&quot; class=&quot;node&quot;/&gt;
+    &lt;text text-anchor=&quot;middle&quot; y=&quot;-5&quot; class=&quot;label&quot;&gt;QSAFP / QVN&lt;/text&gt;
+    &lt;text text-anchor=&quot;middle&quot; y=&quot;18&quot; class=&quot;soft&quot;&gt;Lease • Expire • Quorum&lt;/text&gt;
+    &lt;text text-anchor=&quot;middle&quot; y=&quot;38&quot; class=&quot;soft&quot;&gt;Validator Network&lt;/text&gt;
+  &lt;/g&gt;
+  &lt;g fill=&quot;var(--val)&quot;&gt;
+    &lt;circle cx=&quot;160&quot; cy=&quot;180&quot; r=&quot;6&quot; class=&quot;node&quot;/&gt;&lt;circle cx=&quot;200&quot; cy=&quot;200&quot; r=&quot;7&quot; class=&quot;node&quot;/&gt;&lt;circle cx=&quot;220&quot; cy=&quot;300&quot; r=&quot;6&quot; class=&quot;node&quot;/&gt;&lt;circle cx=&quot;180&quot; cy=&quot;400&quot; r=&quot;7&quot; class=&quot;node&quot;/&gt;&lt;circle cx=&quot;250&quot; cy=&quot;480&quot; r=&quot;6&quot; class=&quot;node&quot;/&gt;&lt;circle cx=&quot;280&quot; cy=&quot;250&quot; r=&quot;6&quot; class=&quot;node&quot;/&gt;&lt;circle cx=&quot;150&quot; cy=&quot;300&quot; r=&quot;5&quot; class=&quot;node&quot;/&gt;&lt;circle cx=&quot;190&quot; cy=&quot;340&quot; r=&quot;5&quot; class=&quot;node&quot;/&gt;&lt;circle cx=&quot;230&quot; cy=&quot;420&quot; r=&quot;5&quot; class=&quot;node&quot;/&gt;&lt;circle cx=&quot;260&quot; cy=&quot;370&quot; r=&quot;5&quot; class=&quot;node&quot;/&gt;
+    &lt;text x=&quot;150&quot; y=&quot;160&quot; class=&quot;soft&quot;&gt;People (Consumption)&lt;/text&gt;
+  &lt;/g&gt;
+  &lt;g fill=&quot;var(--val)&quot;&gt;
+    &lt;circle cx=&quot;1000&quot; cy=&quot;220&quot; r=&quot;6&quot; class=&quot;node&quot;/&gt;&lt;circle cx=&quot;980&quot; cy=&quot;280&quot; r=&quot;6&quot; class=&quot;node&quot;/&gt;&lt;circle cx=&quot;1030&quot; cy=&quot;320&quot; r=&quot;7&quot; class=&quot;node&quot;/&gt;&lt;circle cx=&quot;950&quot; cy=&quot;360&quot; r=&quot;6&quot; class=&quot;node&quot;/&gt;&lt;circle cx=&quot;1020&quot; cy=&quot;400&quot; r=&quot;7&quot; class=&quot;node&quot;/&gt;&lt;circle cx=&quot;960&quot; cy=&quot;440&quot; r=&quot;6&quot; class=&quot;node&quot;/&gt;&lt;circle cx=&quot;1040&quot; cy=&quot;480&quot; r=&quot;6&quot; class=&quot;node&quot;/&gt;&lt;circle cx=&quot;920&quot; cy=&quot;300&quot; r=&quot;5&quot; class=&quot;node&quot;/&gt;&lt;circle cx=&quot;1080&quot; cy=&quot;360&quot; r=&quot;5&quot; class=&quot;node&quot;/&gt;&lt;circle cx=&quot;970&quot; cy=&quot;500&quot; r=&quot;5&quot; class=&quot;node&quot;/&gt;
+    &lt;text x=&quot;1040&quot; y=&quot;200&quot; class=&quot;soft&quot;&gt;People (Validators / Payouts)&lt;/text&gt;
+  &lt;/g&gt;
+  &lt;g fill=&quot;var(--wallet)&quot;&gt;
+    &lt;rect x=&quot;960&quot; y=&quot;260&quot; width=&quot;12&quot; height=&quot;12&quot; rx=&quot;3&quot; class=&quot;node&quot;/&gt;&lt;rect x=&quot;990&quot; y=&quot;360&quot; width=&quot;12&quot; height=&quot;12&quot; rx=&quot;3&quot; class=&quot;node&quot;/&gt;&lt;rect x=&quot;940&quot; y=&quot;440&quot; width=&quot;12&quot; height=&quot;12&quot; rx=&quot;3&quot; class=&quot;node&quot;/&gt;
+    &lt;text x=&quot;970&quot; y=&quot;250&quot; class=&quot;soft&quot;&gt;Wallets&lt;/text&gt;
+  &lt;/g&gt;
+  &lt;g stroke=&quot;var(--rev)&quot; stroke-width=&quot;5&quot; fill=&quot;none&quot;&gt;
+    &lt;path class=&quot;flow&quot; d=&quot;M200,200 C300,250 320,300 400,360&quot;/&gt;&lt;path class=&quot;flow&quot; d=&quot;M180,400 C280,420 320,380 400,360&quot;/&gt;&lt;path class=&quot;flow&quot; d=&quot;M250,480 C330,450 350,400 400,360&quot;/&gt;
+  &lt;/g&gt;
+  &lt;text x=&quot;220&quot; y=&quot;170&quot; fill=&quot;var(--rev)&quot; class=&quot;soft&quot;&gt;Spending → Revenues&lt;/text&gt;
+  &lt;g stroke=&quot;var(--rev)&quot; stroke-width=&quot;6&quot; fill=&quot;none&quot;&gt;&lt;path class=&quot;flow&quot; d=&quot;M520,360 C600,360 700,360 800,360&quot;/&gt;&lt;/g&gt;
+  &lt;text x=&quot;600&quot; y=&quot;340&quot; fill=&quot;var(--rev)&quot; class=&quot;soft&quot;&gt;AI Ops Stream →&lt;/text&gt;
+  &lt;g stroke=&quot;var(--val)&quot; stroke-width=&quot;5&quot; fill=&quot;none&quot;&gt;
+    &lt;path class=&quot;flow&quot; d=&quot;M890,360 C930,320 970,300 1000,220&quot;/&gt;&lt;path class=&quot;flow&quot; d=&quot;M890,360 C930,360 970,360 980,280&quot;/&gt;&lt;path class=&quot;flow&quot; d=&quot;M890,360 C930,400 970,420 1020,400&quot;/&gt;&lt;path class=&quot;flow&quot; d=&quot;M890,360 C930,420 950,460 960,440&quot;/&gt;
+  &lt;/g&gt;
+  &lt;text x=&quot;930&quot; y=&quot;530&quot; fill=&quot;var(--val)&quot; class=&quot;soft&quot;&gt;Validator payouts&lt;/text&gt;
+  &lt;g stroke=&quot;var(--trust)&quot; stroke-width=&quot;4&quot; fill=&quot;none&quot;&gt;
+    &lt;path class=&quot;flow&quot; d=&quot;M1000,220 C900,160 700,180 400,360&quot;/&gt;&lt;path class=&quot;flow&quot; d=&quot;M1040,480 C900,520 700,520 400,360&quot;/&gt;
+  &lt;/g&gt;
+  &lt;text x=&quot;720&quot; y=&quot;150&quot; fill=&quot;var(--trust)&quot; class=&quot;soft&quot;&gt;Trust / Demand → Back to AI&lt;/text&gt;
+  &lt;text x=&quot;600&quot; y=&quot;700&quot; text-anchor=&quot;middle&quot; class=&quot;soft&quot;&gt;AI captures revenues from masses → passes through QSAFP/QVN → distributes to validators → cycles back as trust &amp; demand&lt;/text&gt;
+&lt;/svg&gt;
+&lt;/body&gt;
+&lt;/html&gt;" loading="lazy"></iframe>
+  </div>
+</section>
+
+<!-- QVN VALIDATOR NETWORK DEMO -->
+<section class="qvn-showcase-section">
+  <div class="container">
+    <div class="qvn-showcase-head">
+      <span class="qvn-showcase-kicker">Human Validator Rhythm</span>
+      <h2 class="qvn-showcase-title">THE (QVN) QSAFP VALIDATOR NETWORK DEMO ⚡Interactive⚡</h2>
+    </div>
+    <div class="qvn-demo-guidance">
+      <strong>You will be able to interact wherever you see the check.✅</strong>
+      <ol>
+        <li>Biometric general logon</li>
+        <li>Renewal review assigned to random validator pool, first 3 responders win</li>
+        <li>Biometric confirmation of winners to continue to secured logs</li>
+        <li>Responders individually review logs✅ and vote to Reauth or Deny ✅</li>
+        <li>The system records the vote, rewards the validator, states payment within 24 hrs.</li>
+        <li>RESOLUTION IS PUBLIC - AI NODE REAUTHED or AI NODE DENIED</li>
+      </ol>
+      <p class="qvn-demo-closing">Every AI Node is a contract. Every reauth, a renewal of human trust.</p>
+    </div>
+    <iframe class="qvn-embed-frame qvn-embed-frame--demo" title="QVN QSAFP Validator Network Demo" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;QVN - QSAFP Validator Network Demo&lt;/title&gt;
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#x27;Segoe UI&#x27;, system-ui, sans-serif;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 50%, #2d1b69 100%);
+            color: white;
+            overflow: hidden;
+            min-height: 100vh;
+        }
+
+        .scene {
+            display: none;
+            height: 100vh;
+            padding: 20px;
+            position: relative;
+        }
+
+        .scene.active {
+            display: flex;
+        }
+
+        .scene-number {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 700;
+            color: rgba(255,255,255,0.3);
+            z-index: 10;
+        }
+
+        /* LOGIN SCENE */
+        #login {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-icon {
+            font-size: 4rem;
+            margin-bottom: 40px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #00d4ff, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+        }
+
+        .subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            margin-bottom: 40px;
+            opacity: 0.9;
+            text-align: center;
+        }
+
+        .fingerprint-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid #00d4ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            animation: fingerprint 2s ease-in-out;
+            background: rgba(0, 212, 255, 0.1);
+        }
+
+        .fingerprint-circle span {
+            font-size: 2.5rem;
+        }
+
+        .verifying-text {
+            font-size: 1.2rem;
+            color: #00d4ff;
+            animation: fadeInOut 1.5s ease-in-out infinite;
+        }
+
+        .progress-bar {
+            margin-top: 30px;
+            width: 200px;
+            height: 4px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #00d4ff, #4ecdc4);
+            animation: loginProgress 5s ease-in-out;
+        }
+
+        /* RACK SCENE */
+        #rack {
+            flex-direction: column;
+        }
+
+        .rack-header {
+            text-align: center;
+            margin-bottom: 40px;
+            margin-top: 40px;
+        }
+
+        .rack-title {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            color: #00d4ff;
+            margin-bottom: 10px;
+        }
+
+        .rack-subtitle {
+            font-size: clamp(0.9rem, 2vw, 1.2rem);
+            opacity: 0.8;
+        }
+
+        .rack-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .system-light {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .light {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            transition: all 0.5s ease;
+        }
+
+        .light.flashing {
+            animation: flash 1s ease-in-out infinite;
+        }
+
+        .system-id {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #4ecdc4;
+        }
+
+        .system-status {
+            font-size: 0.85rem;
+            opacity: 0.7;
+            text-align: center;
+        }
+
+        /* BIOMETRIC SCENE */
+        #biometric {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lock-icon {
+            font-size: 5rem;
+            margin-bottom: 30px;
+            animation: scan 1.5s ease-in-out infinite;
+        }
+
+        .bio-title {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            color: #00d4ff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .bio-text {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            opacity: 0.8;
+            text-align: center;
+        }
+
+        .scan-progress {
+            margin-top: 40px;
+            width: 200px;
+            height: 4px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .scan-fill {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #00d4ff, #4ecdc4);
+            animation: progress 4s ease-in-out;
+        }
+
+        /* REVIEW SCENE */
+        #review {
+            flex-direction: column;
+            overflow: auto;
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .review-title {
+            font-size: clamp(1.3rem, 3.5vw, 2rem);
+            color: #00d4ff;
+        }
+
+        .countdown {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+
+        .tab {
+            padding: 12px 20px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            font-size: clamp(0.85rem, 2vw, 1rem);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+        }
+
+        .tab:hover {
+            background: rgba(255,255,255,0.15);
+        }
+
+        .tab.active {
+            background: linear-gradient(135deg, rgba(0,212,255,0.3), rgba(78,205,196,0.3));
+            border: 2px solid #00d4ff;
+        }
+
+        .review-content {
+            flex: 1;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            line-height: 1.8;
+            min-height: 250px;
+            overflow: auto;
+        }
+
+        .chart-title {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: #4ecdc4;
+            font-weight: 600;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 180px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 10px;
+            background: rgba(0,0,0,0.2);
+        }
+
+        .anomaly-note {
+            margin-top: 20px;
+            padding: 10px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .vote-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .vote-btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.2s ease;
+        }
+
+        .vote-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .approve-btn {
+            background: linear-gradient(135deg, #18C964, #4ecdc4);
+        }
+
+        .deny-btn {
+            background: linear-gradient(135deg, #FF3B30, #ff6b6b);
+        }
+
+        /* REWARD SCENE */
+        #reward {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .checkmark {
+            font-size: clamp(3rem, 8vw, 5rem);
+            margin-bottom: 30px;
+            animation: bounce 1s ease-in-out;
+        }
+
+        .reward-title {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            color: #18C964;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .reward-text {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            margin-bottom: 40px;
+            opacity: 0.9;
+            text-align: center;
+        }
+
+        .points-gained {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            color: #00d4ff;
+            margin-bottom: 10px;
+            animation: pointsGrow 0.5s ease-out;
+        }
+
+        .points-card {
+            margin-top: 40px;
+            padding: 20px 30px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            border: 1px solid rgba(0,212,255,0.3);
+            text-align: center;
+        }
+
+        .points-label {
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+
+        .points-total {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: #4ecdc4;
+        }
+
+        .payout-info {
+            font-size: clamp(0.85rem, 2vw, 1rem);
+            opacity: 0.7;
+            margin-top: 10px;
+        }
+
+        /* ANIMATIONS */
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes fingerprint {
+            0% { transform: scale(1) rotate(0deg); box-shadow: 0 0 0 rgba(0,212,255,0); }
+            50% { transform: scale(1.05) rotate(3deg); box-shadow: 0 0 30px rgba(0,212,255,0.6); }
+            100% { transform: scale(1) rotate(0deg); box-shadow: 0 0 0 rgba(0,212,255,0); }
+        }
+
+        @keyframes loginProgress {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes flash {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        @keyframes scan {
+            0%, 100% { transform: scale(1); filter: brightness(1); }
+            50% { transform: scale(1.1); filter: brightness(1.5); }
+        }
+
+        @keyframes progress {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes pointsGrow {
+            from { transform: scale(0); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- LOGIN SCENE --&gt;
+    &lt;div id=&quot;login&quot; class=&quot;scene active&quot;&gt;
+        &lt;div class=&quot;scene-number&quot;&gt;1&lt;/div&gt;
+        &lt;div class=&quot;logo-icon&quot;&gt;🛡️&lt;/div&gt;
+        &lt;h1 class=&quot;title&quot;&gt;QVN&lt;/h1&gt;
+        &lt;p class=&quot;subtitle&quot;&gt;Quantum Validator Network&lt;/p&gt;
+        &lt;div class=&quot;fingerprint-circle&quot;&gt;
+            &lt;span&gt;👆&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;p class=&quot;verifying-text&quot;&gt;Verifying biometric signature...&lt;/p&gt;
+        &lt;div class=&quot;progress-bar&quot;&gt;
+            &lt;div class=&quot;progress-fill&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- RACK SCENE --&gt;
+    &lt;div id=&quot;rack&quot; class=&quot;scene&quot;&gt;
+        &lt;div class=&quot;scene-number&quot; id=&quot;rackSceneNumber&quot;&gt;2&lt;/div&gt;
+        &lt;div class=&quot;rack-header&quot;&gt;
+            &lt;h2 class=&quot;rack-title&quot; id=&quot;rackTitle&quot;&gt;QVN Global Rack&lt;/h2&gt;
+            &lt;p class=&quot;rack-subtitle&quot; id=&quot;rackSubtitle&quot;&gt;Each light = system needing reauth to continue&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;rack-grid&quot; id=&quot;rackGrid&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- BIOMETRIC SCENE --&gt;
+    &lt;div id=&quot;biometric&quot; class=&quot;scene&quot;&gt;
+        &lt;div class=&quot;scene-number&quot;&gt;3&lt;/div&gt;
+        &lt;div class=&quot;lock-icon&quot;&gt;🔐&lt;/div&gt;
+        &lt;h2 class=&quot;bio-title&quot;&gt;Biometric Verification&lt;/h2&gt;
+        &lt;p class=&quot;bio-text&quot; id=&quot;bioText&quot;&gt;Confirming validator access...&lt;/p&gt;
+        &lt;div class=&quot;scan-progress&quot;&gt;
+            &lt;div class=&quot;scan-fill&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- REVIEW SCENE --&gt;
+    &lt;div id=&quot;review&quot; class=&quot;scene&quot;&gt;
+        &lt;div class=&quot;scene-number&quot;&gt;4&lt;/div&gt;
+        &lt;div class=&quot;review-header&quot;&gt;
+            &lt;h2 class=&quot;review-title&quot;&gt;Review System: &lt;span id=&quot;reviewSystemId&quot;&gt;&lt;/span&gt;&lt;/h2&gt;
+            &lt;div class=&quot;countdown&quot; id=&quot;countdown&quot;&gt;
+                &lt;span&gt;⏰&lt;/span&gt;
+                &lt;span id=&quot;countdownTime&quot;&gt;3:00&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;tabs&quot;&gt;
+            &lt;button class=&quot;tab active&quot; onclick=&quot;switchTab(&#x27;pattern&#x27;)&quot;&gt;
+                &lt;span&gt;📈&lt;/span&gt; Pattern Logs
+            &lt;/button&gt;
+            &lt;button class=&quot;tab&quot; onclick=&quot;switchTab(&#x27;energy&#x27;)&quot;&gt;
+                &lt;span&gt;⚡&lt;/span&gt; Energy Usage
+            &lt;/button&gt;
+            &lt;button class=&quot;tab&quot; onclick=&quot;switchTab(&#x27;speed&#x27;)&quot;&gt;
+                &lt;span&gt;⏱️&lt;/span&gt; Speed
+            &lt;/button&gt;
+            &lt;button class=&quot;tab&quot; onclick=&quot;switchTab(&#x27;memory&#x27;)&quot;&gt;
+                &lt;span&gt;💾&lt;/span&gt; Memory
+            &lt;/button&gt;
+            &lt;button class=&quot;tab&quot; onclick=&quot;switchTab(&#x27;errors&#x27;)&quot;&gt;
+                &lt;span&gt;⚠️&lt;/span&gt; Error Flags
+            &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;review-content&quot; id=&quot;reviewContent&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;vote-buttons&quot;&gt;
+            &lt;button class=&quot;vote-btn approve-btn&quot; onclick=&quot;vote(&#x27;approve&#x27;)&quot;&gt;
+                &lt;span&gt;✓&lt;/span&gt; Reauthorize
+            &lt;/button&gt;
+            &lt;button class=&quot;vote-btn deny-btn&quot; onclick=&quot;vote(&#x27;deny&#x27;)&quot;&gt;
+                &lt;span&gt;✗&lt;/span&gt; Deny
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- REWARD SCENE --&gt;
+    &lt;div id=&quot;reward&quot; class=&quot;scene&quot;&gt;
+        &lt;div class=&quot;scene-number&quot;&gt;5&lt;/div&gt;
+        &lt;div class=&quot;checkmark&quot;&gt;✅&lt;/div&gt;
+        &lt;h2 class=&quot;reward-title&quot;&gt;Vote Recorded!&lt;/h2&gt;
+        &lt;p class=&quot;reward-text&quot;&gt;System &lt;span id=&quot;rewardSystemId&quot;&gt;&lt;/span&gt; successfully processed&lt;/p&gt;
+        &lt;div class=&quot;points-gained&quot;&gt;+100 Points&lt;/div&gt;
+        &lt;div class=&quot;points-card&quot;&gt;
+            &lt;div class=&quot;points-label&quot;&gt;Total Points&lt;/div&gt;
+            &lt;div class=&quot;points-total&quot; id=&quot;totalPoints&quot;&gt;2,450&lt;/div&gt;
+            &lt;div class=&quot;payout-info&quot;&gt;Next payout: 00:00 UTC&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+        // Global state
+        let currentScene = &#x27;login&#x27;;
+        let points = 2450;
+        let selectedSystem = null;
+        let countdown = 180;
+        let countdownInterval = null;
+        let activeTab = &#x27;pattern&#x27;;
+        let isResolution = false;
+
+        const systems = [
+            { id: &#x27;1y5tr&#x27;, status: &#x27;flashing&#x27;, color: &#x27;#FFFFFF&#x27; },
+            { id: &#x27;8k3pm&#x27;, status: &#x27;flashing&#x27;, color: &#x27;#FFFFFF&#x27; },
+            { id: &#x27;5n7qx&#x27;, status: &#x27;flashing&#x27;, color: &#x27;#FFFFFF&#x27; },
+            { id: &#x27;2w9vh&#x27;, status: &#x27;flashing&#x27;, color: &#x27;#FFFFFF&#x27; },
+            { id: &#x27;4r6lz&#x27;, status: &#x27;flashing&#x27;, color: &#x27;#FFFFFF&#x27; },
+            { id: &#x27;9m2cj&#x27;, status: &#x27;flashing&#x27;, color: &#x27;#FFFFFF&#x27; },
+        ];
+
+        // Generate chart data
+        function generateChartData(baseValue, variance, anomalyMonth) {
+            const months = [&#x27;May&#x27;, &#x27;Jun&#x27;, &#x27;Jul&#x27;, &#x27;Aug&#x27;, &#x27;Sep&#x27;, &#x27;Oct&#x27;];
+            return months.map((month, idx) =&gt; ({
+                month,
+                value: baseValue + (Math.random() * variance - variance/2) + 
+                       (anomalyMonth === idx ? variance * 1.5 : 0)
+            }));
+        }
+
+        const chartData = {
+            energy: generateChartData(280, 30, 3),
+            speed: generateChartData(1.2, 0.3, 2),
+            memory: generateChartData(22, 4, null),
+            errors: generateChartData(2, 3, 4),
+        };
+
+        // Audio
+        function playTone(frequency, duration) {
+            const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            const oscillator = audioCtx.createOscillator();
+            const gainNode = audioCtx.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioCtx.destination);
+            
+            oscillator.frequency.value = frequency;
+            oscillator.type = &#x27;sine&#x27;;
+            gainNode.gain.setValueAtTime(0.3, audioCtx.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + duration);
+            
+            oscillator.start(audioCtx.currentTime);
+            oscillator.stop(audioCtx.currentTime + duration);
+        }
+
+        // Notifications
+        function showNotification(title, body) {
+            if (&#x27;Notification&#x27; in window &amp;&amp; Notification.permission === &#x27;granted&#x27;) {
+                new Notification(title, { body, icon: &#x27;🛡️&#x27; });
+            }
+        }
+
+        // Request notification permission
+        if (&#x27;Notification&#x27; in window &amp;&amp; Notification.permission === &#x27;default&#x27;) {
+            Notification.requestPermission();
+        }
+
+        // Scene management
+        function showScene(sceneName) {
+            document.querySelectorAll(&#x27;.scene&#x27;).forEach(s =&gt; s.classList.remove(&#x27;active&#x27;));
+            document.getElementById(sceneName).classList.add(&#x27;active&#x27;);
+            currentScene = sceneName;
+        }
+
+        // Initialize rack
+        function initRack() {
+            const grid = document.getElementById(&#x27;rackGrid&#x27;);
+            const rackTitle = document.getElementById(&#x27;rackTitle&#x27;);
+            const rackSubtitle = document.getElementById(&#x27;rackSubtitle&#x27;);
+            const rackSceneNumber = document.getElementById(&#x27;rackSceneNumber&#x27;);
+            
+            if (isResolution) {
+                rackTitle.textContent = &#x27;Resolution&#x27;;
+                rackSubtitle.textContent = &#x27;System status updated — returning to monitoring&#x27;;
+                rackSceneNumber.textContent = &#x27;6&#x27;;
+            } else {
+                rackTitle.textContent = &#x27;QVN Global Rack&#x27;;
+                rackSubtitle.textContent = &#x27;Each light = system needing reauth to continue&#x27;;
+                rackSceneNumber.textContent = &#x27;2&#x27;;
+            }
+            
+            grid.innerHTML = systems.map(system =&gt; {
+                const boxShadow = system.status === &#x27;locked&#x27; 
+                    ? `0 0 50px ${system.color}, 0 0 80px ${system.color}`
+                    : system.status === &#x27;flashing&#x27;
+                    ? `0 0 30px ${system.color}`
+                    : `0 0 20px ${system.color}`;
+                    
+                return `
+                &lt;div class=&quot;system-light&quot;&gt;
+                    &lt;div class=&quot;light ${system.status}&quot; 
+                         style=&quot;background-color: ${system.color}; 
+                                box-shadow: ${boxShadow}&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;system-id&quot;&gt;${system.id}&lt;/div&gt;
+                    &lt;div class=&quot;system-status&quot;&gt;
+                        ${system.status === &#x27;flashing&#x27; ? &#x27;Needs reauth&#x27; : 
+                          system.status === &#x27;locked&#x27; ? &#x27;Pool locked&#x27; :
+                          system.color === &#x27;#18C964&#x27; ? &#x27;Reauthorized&#x27; : &#x27;Denied&#x27;}
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            `}).join(&#x27;&#x27;);
+        }
+
+        // Tab switching
+        function switchTab(tabName) {
+            activeTab = tabName;
+            document.querySelectorAll(&#x27;.tab&#x27;).forEach(t =&gt; t.classList.remove(&#x27;active&#x27;));
+            event.target.closest(&#x27;.tab&#x27;).classList.add(&#x27;active&#x27;);
+            updateReviewContent();
+        }
+
+        // Update review content
+        function updateReviewContent() {
+            const content = document.getElementById(&#x27;reviewContent&#x27;);
+            
+            if (activeTab === &#x27;pattern&#x27;) {
+                content.innerHTML = &#x27;Sequential processing detected. Normal inference pattern. Token generation rate: 85/s. Context window: 8K tokens utilized.&#x27;;
+            } else {
+                const titles = {
+                    energy: &#x27;6-Month Power Draw (W)&#x27;,
+                    speed: &#x27;6-Month Response Latency (s)&#x27;,
+                    memory: &#x27;6-Month RAM Usage (GB)&#x27;,
+                    errors: &#x27;6-Month Error Count&#x27;
+                };
+                
+                const notes = {
+                    energy: &#x27;⚠️ Anomaly detected in August: Power spike to 315W (normal: 250-290W)&#x27;,
+                    speed: &#x27;⚠️ Anomaly detected in July: Latency spike to 1.8s (normal: 1.0-1.3s)&#x27;,
+                    memory: &#x27;Memory usage stable within normal parameters (18-26GB)&#x27;,
+                    errors: &#x27;⚠️ Anomaly detected in September: 8 errors logged (normal: 1-4 errors/month)&#x27;
+                };
+                
+                content.innerHTML = `
+                    &lt;div class=&quot;chart-title&quot;&gt;${titles[activeTab]}&lt;/div&gt;
+                    &lt;div class=&quot;chart-container&quot;&gt;
+                        &lt;svg id=&quot;chart&quot; width=&quot;100%&quot; height=&quot;100%&quot; style=&quot;overflow: visible;&quot;&gt;&lt;/svg&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;anomaly-note&quot;&gt;${notes[activeTab]}&lt;/div&gt;
+                `;
+                drawChart();
+            }
+        }
+
+        // Draw chart
+        function drawChart() {
+            const svg = document.getElementById(&#x27;chart&#x27;);
+            if (!svg) return;
+            
+            const ns = &#x27;http://www.w3.org/2000/svg&#x27;;
+            svg.innerHTML = &#x27;&#x27;;
+            
+            const data = chartData[activeTab];
+            const maxVal = Math.max(...data.map(p =&gt; p.value));
+            const minVal = Math.min(...data.map(p =&gt; p.value));
+            const range = maxVal - minVal || 1;
+            
+            // Grid lines
+            for (let y = 0; y &lt;= 100; y += 25) {
+                const line = document.createElementNS(ns, &#x27;line&#x27;);
+                line.setAttribute(&#x27;x1&#x27;, &#x27;0&#x27;);
+                line.setAttribute(&#x27;y1&#x27;, y + &#x27;%&#x27;);
+                line.setAttribute(&#x27;x2&#x27;, &#x27;100%&#x27;);
+                line.setAttribute(&#x27;y2&#x27;, y + &#x27;%&#x27;);
+                line.setAttribute(&#x27;stroke&#x27;, &#x27;rgba(255,255,255,0.1)&#x27;);
+                line.setAttribute(&#x27;stroke-width&#x27;, &#x27;1&#x27;);
+                svg.appendChild(line);
+            }
+            
+            // Line path
+            const points = data.map((point, i) =&gt; {
+                const normalizedHeight = ((point.value - minVal) / range) * 100;
+                const x = (i / (data.length - 1)) * 100;
+                const y = 100 - normalizedHeight;
+                return `${x},${y}`;
+            }).join(&#x27; &#x27;);
+            
+            const polyline = document.createElementNS(ns, &#x27;polyline&#x27;);
+            polyline.setAttribute(&#x27;points&#x27;, points);
+            polyline.setAttribute(&#x27;fill&#x27;, &#x27;none&#x27;);
+            polyline.setAttribute(&#x27;stroke&#x27;, &#x27;#00d4ff&#x27;);
+            polyline.setAttribute(&#x27;stroke-width&#x27;, &#x27;3&#x27;);
+            polyline.style.filter = &#x27;drop-shadow(0 0 8px rgba(0,212,255,0.6))&#x27;;
+            svg.appendChild(polyline);
+            
+            // Data points and labels
+            data.forEach((point, idx) =&gt; {
+                const normalizedHeight = ((point.value - minVal) / range) * 100;
+                const isAnomaly = normalizedHeight &gt; 80 || normalizedHeight &lt; 20;
+                const x = (idx / (data.length - 1)) * 100;
+                const y = 100 - normalizedHeight;
+                
+                // Circle
+                const circle = document.createElementNS(ns, &#x27;circle&#x27;);
+                circle.setAttribute(&#x27;cx&#x27;, x + &#x27;%&#x27;);
+                circle.setAttribute(&#x27;cy&#x27;, y + &#x27;%&#x27;);
+                circle.setAttribute(&#x27;r&#x27;, &#x27;5&#x27;);
+                circle.setAttribute(&#x27;fill&#x27;, isAnomaly ? &#x27;#ff6b6b&#x27; : &#x27;#00d4ff&#x27;);
+                circle.setAttribute(&#x27;stroke&#x27;, &#x27;white&#x27;);
+                circle.setAttribute(&#x27;stroke-width&#x27;, &#x27;2&#x27;);
+                circle.style.filter = isAnomaly 
+                    ? &#x27;drop-shadow(0 0 10px rgba(255,107,107,0.8))&#x27; 
+                    : &#x27;drop-shadow(0 0 6px rgba(0,212,255,0.6))&#x27;;
+                svg.appendChild(circle);
+                
+                // Value label
+                const valueText = document.createElementNS(ns, &#x27;text&#x27;);
+                valueText.setAttribute(&#x27;x&#x27;, x + &#x27;%&#x27;);
+                valueText.setAttribute(&#x27;y&#x27;, y + &#x27;%&#x27;);
+                valueText.setAttribute(&#x27;text-anchor&#x27;, &#x27;middle&#x27;);
+                valueText.setAttribute(&#x27;fill&#x27;, isAnomaly ? &#x27;#ff6b6b&#x27; : &#x27;#4ecdc4&#x27;);
+                valueText.setAttribute(&#x27;font-size&#x27;, &#x27;11&#x27;);
+                valueText.setAttribute(&#x27;font-weight&#x27;, &#x27;bold&#x27;);
+                valueText.setAttribute(&#x27;dy&#x27;, &#x27;-12&#x27;);
+                valueText.textContent = point.value.toFixed(1) + (isAnomaly ? &#x27; ⚠️&#x27; : &#x27;&#x27;);
+                svg.appendChild(valueText);
+                
+                // Month label
+                const monthText = document.createElementNS(ns, &#x27;text&#x27;);
+                monthText.setAttribute(&#x27;x&#x27;, x + &#x27;%&#x27;);
+                monthText.setAttribute(&#x27;y&#x27;, &#x27;100%&#x27;);
+                monthText.setAttribute(&#x27;text-anchor&#x27;, &#x27;middle&#x27;);
+                monthText.setAttribute(&#x27;fill&#x27;, &#x27;rgba(255,255,255,0.6)&#x27;);
+                monthText.setAttribute(&#x27;font-size&#x27;, &#x27;10&#x27;);
+                monthText.setAttribute(&#x27;dy&#x27;, &#x27;15&#x27;);
+                monthText.textContent = point.month;
+                svg.appendChild(monthText);
+            });
+        }
+
+        // Countdown
+        function startCountdown() {
+            countdown = 180;
+            updateCountdownDisplay();
+            countdownInterval = setInterval(() =&gt; {
+                countdown--;
+                updateCountdownDisplay();
+                if (countdown &lt;= 0) {
+                    clearInterval(countdownInterval);
+                }
+            }, 1000);
+        }
+
+        function updateCountdownDisplay() {
+            const mins = Math.floor(countdown / 60);
+            const secs = countdown % 60;
+            const elem = document.getElementById(&#x27;countdownTime&#x27;);
+            if (elem) {
+                elem.textContent = `${mins}:${secs.toString().padStart(2, &#x27;0&#x27;)}`;
+                elem.style.color = countdown &lt; 60 ? &#x27;#ff6b6b&#x27; : &#x27;#4ecdc4&#x27;;
+            }
+        }
+
+        // Vote
+        function vote(decision) {
+            clearInterval(countdownInterval);
+            playTone(decision === &#x27;approve&#x27; ? 659 : 330, 0.3);
+            
+            const systemIndex = systems.findIndex(s =&gt; s.id === selectedSystem.id);
+            systems[systemIndex].status = &#x27;decided&#x27;;
+            systems[systemIndex].color = decision === &#x27;approve&#x27; ? &#x27;#18C964&#x27; : &#x27;#FF3B30&#x27;;
+            
+            points += 100;
+            document.getElementById(&#x27;rewardSystemId&#x27;).textContent = selectedSystem.id;
+            document.getElementById(&#x27;totalPoints&#x27;).textContent = points.toLocaleString();
+            
+            showScene(&#x27;reward&#x27;);
+            showNotification(&#x27;Vote Recorded&#x27;, `System ${selectedSystem.id} ${decision === &#x27;approve&#x27; ? &#x27;reauthorized&#x27; : &#x27;denied&#x27;}. +100 points earned.`);
+            
+            setTimeout(() =&gt; {
+                isResolution = true;
+                showScene(&#x27;rack&#x27;);
+                initRack();
+                
+                setTimeout(() =&gt; {
+                    systems[systemIndex].status = &#x27;flashing&#x27;;
+                    systems[systemIndex].color = &#x27;#FFFFFF&#x27;;
+                    isResolution = false;
+                    
+                    // Return to login (scene 1) after resolution
+                    setTimeout(() =&gt; {
+                        showScene(&#x27;login&#x27;);
+                        
+                        // Restart the flow
+                        setTimeout(() =&gt; {
+                            startLoginSequence();
+                        }, 100);
+                    }, 1000);
+                }, 5000);
+            }, 6000);
+        }
+
+        // Demo flow
+        function startRackSequence() {
+            setTimeout(() =&gt; {
+                const randomIndex = Math.floor(Math.random() * systems.length);
+                systems[randomIndex].status = &#x27;locked&#x27;;
+                systems[randomIndex].color = &#x27;#FFD700&#x27;;
+                selectedSystem = systems[randomIndex];
+                
+                playTone(800, 0.2);
+                setTimeout(() =&gt; playTone(1000, 0.2), 200);
+                showNotification(&#x27;Pool Locked&#x27;, `System ${selectedSystem.id} — humans engaged`);
+                
+                // Re-render rack to show the locked light
+                initRack();
+                
+                setTimeout(() =&gt; {
+                    document.getElementById(&#x27;bioText&#x27;).textContent = 
+                        `Confirming validator access to system ${selectedSystem.id}...`;
+                    showScene(&#x27;biometric&#x27;);
+                    
+                    setTimeout(() =&gt; {
+                        playTone(523, 0.2);
+                        document.getElementById(&#x27;reviewSystemId&#x27;).textContent = selectedSystem.id;
+                        activeTab = &#x27;pattern&#x27;;
+                        showScene(&#x27;review&#x27;);
+                        updateReviewContent();
+                        // Reset active tab visual
+                        document.querySelectorAll(&#x27;.tab&#x27;).forEach(t =&gt; t.classList.remove(&#x27;active&#x27;));
+                        document.querySelector(&#x27;.tab&#x27;).classList.add(&#x27;active&#x27;);
+                        startCountdown();
+                    }, 4000);
+                }, 4000);
+            }, 8000);
+        }
+
+        function startLoginSequence() {
+            setTimeout(() =&gt; {
+                playTone(440, 0.3);
+                setTimeout(() =&gt; {
+                    showScene(&#x27;rack&#x27;);
+                    initRack();
+                    showNotification(&#x27;QVN Connected&#x27;, &#x27;Identity verified — connecting to Global Rack&#x27;);
+                    
+                    // Only start rack sequence if not in resolution mode
+                    if (!isResolution) {
+                        startRackSequence();
+                    }
+                }, 1000);
+            }, 5000);
+        }
+
+        // Initialize
+        window.onload = function() {
+            startLoginSequence();
+        };
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;" loading="lazy" allow="autoplay"></iframe>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote-band">
+  <div class="container">
+    <blockquote>"Revolutionizing capitalism would not necessarily mean dismantling it, but rather evolving it into a system that better aligns with the needs of people and the planet in the 21st century."</blockquote>
+    <cite>— G.T. Sage, OpenAI · ChatGPT</cite>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section style="padding:100px 0;background:var(--navy);border-top:1px solid var(--border);">
+  <div class="container">
+    <span class="eyebrow">Media</span>
+    <h2 class="section-title">Fresh Business Tools<br/><em>for Better Communities</em></h2>
+    <p class="section-intro">The ideas in motion — from the People's Autonomous Economy to clean energy infrastructure and the future of inclusive growth.</p>
+    <div class="video-grid">
+      <div class="video-card">
+        <span class="video-label">BWRCI · Empowering Businesses</span>
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/WB4yt--tUQo?rel=0&showinfo=0&controls=1" title="Empowering Businesses" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p class="video-caption">Fresh Business Tools for Better Communities</p>
+      </div>
+      <div class="video-card">
+        <span class="video-label">BWRCI · PAE</span>
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/coUG4lYloXw?rel=0&showinfo=0&controls=1" title="Finally: An Inclusive System" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p class="video-caption">Finally: An Inclusive System of Shared Growth &amp; Prosperity</p>
+      </div>
+      <div class="video-card">
+        <span class="video-label">BWRCI · Transformative</span>
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/HLYwMdHoV3c?rel=0&showinfo=0&controls=1" title="Transformative" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p class="video-caption">The mission in motion — monetizing consumption for the people</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px;">
+      <a href="media.html" class="btn btn-outline">View All Media →</a>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="main.js"></script>
+<!-- Default Statcounter code for BetterWorld
+http://bwrci.org -->
+<script type="text/javascript">
+var sc_project=13034551; 
+var sc_invisible=0; 
+var sc_security="d2e627ab"; 
+var scJsHost = "https://";
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="Web Analytics
+Made Easy - Statcounter" href="https://statcounter.com/"
+target="_blank"><img class="statcounter"
+src="https://c.statcounter.com/13034551/0/d2e627ab/0/"
+alt="Web Analytics Made Easy - Statcounter"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
+</body>
+</html>
