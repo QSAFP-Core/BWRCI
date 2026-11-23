@@ -126,8 +126,11 @@
     /* ── SRO MANDATE ── */
     .mandate{background:
         radial-gradient(ellipse at 50% 0%, rgba(212,175,95,0.08), transparent 60%), var(--ink)}
+    .mandate{overflow:hidden}
+    .mandate::before{content:'';position:absolute;left:50%;top:0;width:min(1000px,130vw);aspect-ratio:1552/1600;transform:translate(-50%,-6%);background:url('bwrci-emblem.jpg') center/contain no-repeat;opacity:.17;pointer-events:none;-webkit-mask-image:radial-gradient(circle, #000 32%, transparent 68%);mask-image:radial-gradient(circle, #000 32%, transparent 68%)}
+    .mandate>.wrap{position:relative;z-index:1}
     .mandate-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:64px}
-    .mcard{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);padding:30px 26px;position:relative}
+    .mcard{background:rgba(3,13,36,0.72);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:var(--r-lg);padding:30px 26px;position:relative}
     .mcard .num{font-family:var(--serif);font-size:2.4rem;color:var(--gold);line-height:1;font-weight:600}
     .mcard h3{font-family:var(--serif);font-size:1.45rem;font-weight:600;margin:14px 0 10px}
     .mcard p{font-size:.94rem;color:var(--dim);line-height:1.65}
@@ -275,8 +278,24 @@
     .pie-label{position:absolute;font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);background:rgba(0,10,30,0.8);border:1px solid var(--line);border-radius:999px;padding:5px 11px;white-space:nowrap}
     .soon-ribbon{position:absolute;left:50%;bottom:2%;transform:translateX(-50%);z-index:3}
 
-    /* ── VIDEO PLACEHOLDER ── */
-    .video-slot{padding:60px 0;border-top:1px dashed var(--line);border-bottom:1px dashed var(--line);text-align:center;color:var(--muted);font-family:var(--mono);font-size:.78rem;letter-spacing:.12em}
+    /* ── IN MOTION (attached under the charter grid) ── */
+    .index-grid.attached{border-radius:var(--r-lg) var(--r-lg) 0 0;border-bottom:none}
+    .motion{border:1px solid var(--line);border-top:2px solid var(--line);border-radius:0 0 var(--r-lg) var(--r-lg);background:linear-gradient(180deg,#06112b 0%,var(--ink-2) 100%);padding:34px 30px 32px}
+    .motion-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+    .motion-head .roman{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:1.1rem;letter-spacing:.12em}
+    .motion-head h3{font-family:var(--serif);font-size:1.75rem;font-weight:600;line-height:1.1}
+    .motion-head p{font-size:.9rem;color:var(--muted)}
+    .motion-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;align-items:start}
+    .mvid{display:flex;flex-direction:column;gap:10px}
+    .mvid-frame{position:relative;aspect-ratio:16/9;border-radius:var(--r);overflow:hidden;background:#000;border:1px solid var(--line);box-shadow:0 20px 50px rgba(0,0,0,0.5)}
+    .mvid.short .mvid-frame{aspect-ratio:9/16;max-height:640px;margin:0 auto;width:min(100%,360px)}
+    .mvid-frame iframe,.mvid-frame img{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
+    .mvid-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,rgba(0,10,30,0.05),rgba(0,10,30,0.55));border:0;cursor:pointer;color:#1a1206}
+    .mvid-play span{width:72px;height:72px;border-radius:50%;background:var(--gold-grad);display:flex;align-items:center;justify-content:center;font-size:1.6rem;padding-left:5px;box-shadow:0 10px 40px rgba(212,175,95,0.5);transition:transform .2s}
+    .mvid-play:hover span{transform:scale(1.08)}
+    .mvid-label{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+    .mvid-cap{font-family:var(--serif);font-size:1.2rem;font-weight:600;color:var(--white);line-height:1.25}
+    @media (max-width:760px){.motion-grid{grid-template-columns:1fr}.motion{padding:26px 18px}}
 
     /* ── QUOTE ── */
     .quote{padding:110px 0;text-align:center;background:radial-gradient(ellipse at center, rgba(212,175,95,0.07), transparent 65%), var(--ink)}
@@ -400,13 +419,21 @@
     <p class="lead">From the manifesto to the silicon, from the validators to the people's economy — each charter carries one part of the load.</p>
   </div>
   <div class="wrap">
-    <div class="index-grid">
+    <div class="index-grid attached">
       <a class="icard rv" href="#finalsay"><span class="roman">Charter I</span><h3>The Final Say</h3><span class="dom">thefinalsay.org</span><p>The manifesto for the Autonomous Era and the proposed H.A.T. Treaty.</p><span class="status s-live">Live</span><span class="go">View charter →</span></a>
       <a class="icard rv" href="#ocup"><span class="roman">Charter II</span><h3>OCUP</h3><span class="dom">ocup.ai</span><p>Temporal authority governance — from policy promises to testable boundaries.</p><span class="status s-live">Live</span><span class="go">View charter →</span></a>
       <a class="icard rv" href="#qvn"><span class="roman">Charter III</span><h3>QVN</h3><span class="dom">Quorum Validator Network</span><p>Human validators renew — or deny — AI authority, one node at a time.</p><span class="status s-sim">Simulated demo</span><span class="go">Try the demo →</span></a>
       <a class="icard rv" href="#aicomsci"><span class="roman">Charter IV</span><h3>The Quorum + One</h3><span class="dom">aicomsci.org</span><p>Allied Intelligence, assembled — five AI partners, one human keyholder.</p><span class="status s-live">Live</span><span class="go">View charter →</span></a>
       <a class="icard rv" href="#pielogic"><span class="roman">Charter V</span><h3>PieLogic</h3><span class="dom">pielogic.com</span><p>The book and publication arm — Inclusionism and the works that follow.</p><span class="status s-live">Live</span><span class="go">View charter →</span></a>
       <a class="icard rv" href="#digipie"><span class="roman">Charter VI</span><h3>DigiPie</h3><span class="dom">digipie.com</span><p>The People's Autonomous Economy, where consumption earns ownership.</p><span class="status s-soon">Coming soon</span><span class="go">View charter →</span></a>
+    </div>
+    <!-- IN MOTION — videos come from motion-videos.js (edit that file to swap videos) -->
+    <div class="motion" id="media">
+      <div class="motion-head">
+        <div><span class="roman">In Motion</span><h3>The charters, in their own words</h3></div>
+        <p>Watch · tap to play</p>
+      </div>
+      <div class="motion-grid" id="motionGrid"></div>
     </div>
   </div>
 </section>
@@ -1766,9 +1793,6 @@ animate();
   </div>
 </section>
 
-<!-- ═════════ STANDARD VIDEO SECTION — INSERT HERE ═════════ -->
-<div class="video-slot" id="media">[ Standard video section goes here ]</div>
-
 <!-- ═════════ QUOTE ═════════ -->
 <section class="quote">
   <div class="wrap rv">
@@ -1834,6 +1858,7 @@ animate();
   </div>
 </footer>
 
+<script src="motion-videos.js"></script>
 <script>
   // nav
   const nav=document.getElementById('nav'),burger=document.getElementById('burger'),links=document.getElementById('navLinks');
@@ -1865,6 +1890,33 @@ animate();
   (function(){
     const imgs=[...document.querySelectorAll('#npcRot img')];let i=0;
     if(imgs.length>1)setInterval(()=>{imgs[i].classList.remove('on');i=(i+1)%imgs.length;imgs[i].classList.add('on')},5000);
+  })();
+
+  // In Motion videos (from motion-videos.js; built-in fallback if that file is missing)
+  (function(){
+    const list=(window.MOTION_VIDEOS&&window.MOTION_VIDEOS.length)?window.MOTION_VIDEOS:[
+      {url:"https://youtu.be/yZ1WR3ehms8",label:"OCUP: Preserving humanity’s seat at the table.",caption:"The system guarding humanity’s final say."},
+      {url:"https://youtu.be/W9xHrTNl6As",label:"Let's Keep Humans in Control",caption:"The Autonomous Era has Arrived!"}];
+    const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const parse=u=>{u=String(u||'');const m=u.match(/src=["']([^"']+)["']/);if(m)u=m[1];
+      const short=/\/shorts\//.test(u);
+      const id=(u.match(/(?:youtu\.be\/|\/shorts\/|\/embed\/|[?&]v=)([A-Za-z0-9_-]{11})/)||[])[1];
+      return id?{id,short}:null};
+    const grid=document.getElementById('motionGrid');if(!grid)return;
+    list.forEach(v=>{
+      const p=parse(v.url);if(!p)return;
+      const el=document.createElement('div');el.className='mvid'+(p.short?' short':'');
+      el.innerHTML='<div class="mvid-frame"><img src="https://i.ytimg.com/vi/'+p.id+'/hqdefault.jpg" alt="" loading="lazy"/>'+
+        '<button class="mvid-play" aria-label="Play: '+esc(v.label)+'"><span>▶</span></button></div>'+
+        '<span class="mvid-label">'+esc(v.label)+'</span><span class="mvid-cap">'+esc(v.caption)+'</span>';
+      el.querySelector('.mvid-play').addEventListener('click',function(){
+        const f=document.createElement('iframe');
+        f.src='https://www.youtube.com/embed/'+p.id+'?autoplay=1&rel=0&playsinline=1';
+        f.title=v.label||'Video';f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';f.allowFullscreen=true;
+        const fr=el.querySelector('.mvid-frame');fr.innerHTML='';fr.appendChild(f);
+      });
+      grid.appendChild(el);
+    });
   })();
 
   // hero video: respect reduced motion
