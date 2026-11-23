@@ -3,638 +3,550 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BWRCI — The Better World Regulatory Coalition Inc.</title>
-  <meta name="description" content="National Autonomous Economies SaaS Testbeds. Because the wealth of nations belongs to the people of each nation, first." />
-  <meta property="og:title" content="The Better World Regulatory Coalition Inc." />
-  <meta property="og:description" content="Because the wealth of nations belongs to the people of each nation, first. 🎯" />
-  <meta property="og:image" content="https://img1.wsimg.com/isteam/ip/75f5b0fa-4cdc-4ad1-ad94-58e64e0039f5/MAIN-BWRCI.png" />
+  <title>BWRCI — The Better World Regulatory Coalition Inc. · The SRO Hub</title>
+  <meta name="description" content="BWRCI is the self-regulatory organization for thefinalsay.org, OCUP.ai, the Quorum Validator Network, AiCOMSCI.org, PieLogic.com and DigiPie.com. Because the wealth of nations belongs to the people of each nation, first." />
+  <meta property="og:title" content="BWRCI — The SRO Hub" />
+  <meta property="og:description" content="One coalition. Six charters. Humanity keeps the final say. 🎯" />
+  <meta property="og:image" content="https://bwrci.org/bwrci-emblem.jpg" />
   <meta property="og:url" content="https://bwrci.org/" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@bwrci_qsafp" />
+  <link rel="icon" href="bwrci-crest.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-  /* ── HERO PRESENTS CARD ── */
-.hero-body {
-  max-width: 100% !important;
-  padding-right: 32px;        /* clean border off the browser edge */
-}
-.hero-crest {
-  flex: 1 1 1000px;
-  flex-grow: 999;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
-  position: relative;
-  z-index: 1;
-  align-self: flex-start;
-  padding-top: 150px;
-}
-.hero-crest img {
-  width: 100%;
-  max-width: 780px;
-  height: auto;
-  object-fit: contain;
-  border-radius: 22px;
-  box-shadow:
-    0 30px 80px rgba(0,0,0,0.55),
-    0 0 0 1px rgba(201,168,76,0.18),
-    0 0 90px rgba(201,168,76,0.16);
-  filter: drop-shadow(0 0 50px rgba(201,168,76,0.22));
-  animation: crest-glow 4s ease-in-out infinite;
-  display: block;
-  margin: 0 0 0 auto;
-}
-@keyframes crest-glow {
-  0%, 100% {
-    filter: drop-shadow(0 0 50px rgba(201,168,76,0.20));
-    transform: scale(1);
-  }
-  50% {
-    filter: drop-shadow(0 0 80px rgba(201,168,76,0.38));
-    transform: scale(1.01);
-  }
-}
+    :root{
+      --ink:#000a1e;          /* matches the emblem's field */
+      --ink-2:#030d24;
+      --ink-3:#071430;
+      --panel:rgba(255,255,255,0.035);
+      --line:rgba(212,175,95,0.18);
+      --line-soft:rgba(255,255,255,0.08);
+      --gold:#d4af5f;
+      --gold-hi:#f1d78f;
+      --gold-lo:#9c7a35;
+      --gold-grad:linear-gradient(135deg,#f3dc95 0%,#d4af5f 45%,#a8823a 100%);
+      --white:#f6f2e8;
+      --dim:rgba(246,242,232,0.72);
+      --muted:rgba(246,242,232,0.48);
+      --teal:#5ff0dc;
+      --serif:'Cormorant Garamond', Georgia, serif;
+      --sans:'Inter', system-ui, sans-serif;
+      --mono:'Space Mono', ui-monospace, monospace;
+      --r:10px; --r-lg:18px;
+      --wrap:1180px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--ink);color:var(--white);font-family:var(--sans);font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--wrap);margin:0 auto;padding:0 32px}
+    .skip{position:absolute;left:-999px;top:8px;background:var(--gold);color:var(--ink);padding:8px 14px;border-radius:6px;z-index:999}
+    .skip:focus{left:12px}
 
-    /* ── VTCNZE CARD (4th pillar — distinct teal accent) ── */
-    .protocol-card--vtcnze::before { background: var(--teal) !important; }
-    .protocol-card--vtcnze:hover { background: #0e1e20; }
-    .vtcnze-tag { color: var(--teal) !important; }
-
-    /* ── 4-col protocols grid ── */
-    .protocols-grid-4 {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2px;
-      background: var(--border-dim);
-      border: 1px solid var(--border-dim);
-      border-radius: var(--r-lg);
-      overflow: hidden;
-    }
-    @media (max-width: 1100px) {
-      .protocols-grid-4 { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 900px) {
-      .hero-crest img { max-width: 420px; }
-    }
-    @media (max-width: 640px) {
-      .protocols-grid-4 { grid-template-columns: 1fr; }
-      .hero-crest img { max-width: 90vw; border-radius: 16px; }
+    /* ── NAV ── */
+    .nav{position:fixed;inset:0 0 auto 0;z-index:100;transition:background .35s,border-color .35s;border-bottom:1px solid transparent}
+    .nav.scrolled{background:rgba(0,10,30,0.88);backdrop-filter:blur(14px);border-color:var(--line)}
+    .nav-in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:74px}
+    .brand{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-size:1.25rem;letter-spacing:.2em;font-weight:600;white-space:nowrap}
+    .brand img{width:34px;height:auto}
+    .brand em{font-style:italic;letter-spacing:.04em;color:var(--gold);font-weight:500;font-size:1.05rem}
+    .nav-links{display:flex;align-items:center;gap:26px;font-size:.92rem;font-weight:400}
+    .nav-links a{color:var(--dim);transition:color .2s}
+    .nav-links a:hover{color:var(--white)}
+    .nav-cta{background:var(--gold-grad);color:#1a1206 !important;font-weight:600;padding:9px 20px;border-radius:999px}
+    .burger{display:none;background:none;border:1px solid var(--line);color:var(--white);font-size:1.2rem;width:42px;height:42px;border-radius:8px;cursor:pointer}
+    @media (max-width:1080px){
+      .burger{display:block}
+      .nav-links{position:absolute;top:74px;right:16px;left:16px;flex-direction:column;align-items:stretch;gap:0;background:rgba(0,10,30,0.97);border:1px solid var(--line);border-radius:var(--r-lg);padding:10px;display:none}
+      .nav-links.open{display:flex}
+      .nav-links a{padding:12px 14px;border-radius:8px}
+      .nav-cta{text-align:center;margin-top:6px}
     }
 
-    /* ── VTCNZE SECTION ── */
-    .vtcnze-section {
-      padding: 100px 0;
-      background: #060e0e;
-      border-top: 1px solid rgba(26,188,156,0.15);
-      border-bottom: 1px solid rgba(26,188,156,0.15);
-      position: relative;
-      overflow: hidden;
-    }
-    .vtcnze-section::before {
-      content: '';
-      position: absolute;
-      top: -120px; right: -120px;
-      width: 500px; height: 500px;
-      background: radial-gradient(circle, rgba(26,188,156,0.06) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .vtcnze-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 72px;
-      align-items: start;
-    }
-    @media (max-width: 960px) {
-      .vtcnze-grid { grid-template-columns: 1fr; gap: 40px; }
-    }
-    .vtcnze-stat-row {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      margin-top: 32px;
-    }
-    .vtcnze-stat {
-      background: rgba(26,188,156,0.06);
-      border: 1px solid rgba(26,188,156,0.18);
-      border-radius: var(--r);
-      padding: 16px 20px;
-    }
-    .vtcnze-stat-num {
-      font-family: var(--font-display);
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--teal);
-      display: block;
-      line-height: 1;
-      margin-bottom: 4px;
-    }
-    .vtcnze-stat-label {
-      font-family: var(--font-mono);
-      font-size: 9px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: rgba(26,188,156,0.6);
-      display: block;
-    }
-    .vtcnze-feature {
-      display: flex;
-      gap: 14px;
-      padding: 16px 0;
-      border-bottom: 1px solid rgba(26,188,156,0.1);
-    }
-    .vtcnze-feature:last-child { border-bottom: none; }
-    .vtcnze-feature-icon {
-      font-size: 1.3rem;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-    .vtcnze-feature h4 {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--white);
-      margin-bottom: 4px;
-    }
-    .vtcnze-feature p {
-      font-size: 0.87rem;
-      color: var(--white-dim);
-      line-height: 1.65;
-    }
-    .btn-teal {
-      background: var(--teal);
-      color: var(--midnight);
-      font-family: var(--font-mono);
-      font-size: 11px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      padding: 13px 28px;
-      border-radius: var(--r);
-      font-weight: 700;
-      display: inline-block;
-      transition: all 0.2s;
-    }
-    .btn-teal:hover { background: #22f0d4; transform: translateY(-1px); }
-    .btn-teal-outline {
-      background: transparent;
-      color: var(--teal);
-      border: 1px solid rgba(26,188,156,0.35);
-      font-family: var(--font-mono);
-      font-size: 11px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      padding: 13px 28px;
-      border-radius: var(--r);
-      display: inline-block;
-      transition: all 0.2s;
-    }
-    .btn-teal-outline:hover { border-color: var(--teal); background: rgba(26,188,156,0.08); }
+    /* ── BUTTONS ── */
+    .btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-weight:600;font-size:1rem;padding:15px 30px;border-radius:999px;transition:transform .2s,box-shadow .2s,background .2s,border-color .2s;cursor:pointer}
+    .btn-gold{background:var(--gold-grad);color:#1a1206;box-shadow:0 10px 36px rgba(212,175,95,0.28)}
+    .btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 44px rgba(212,175,95,0.42)}
+    .btn-line{border:1px solid rgba(246,242,232,0.28);color:var(--white);background:rgba(0,10,30,0.35)}
+    .btn-line:hover{border-color:var(--gold);color:var(--gold-hi)}
+    .btn-sm{padding:11px 22px;font-size:.9rem}
 
-    /* ── MISSION BAND 4-col ── */
-    .mission-band-4 .container {
-      grid-template-columns: repeat(4, 1fr) !important;
+    /* ── HERO ── */
+    .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:96px 0 90px}
+    .hero video,.hero .hero-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+    .hero::before{content:'';position:absolute;inset:0;z-index:1;
+      background:
+        radial-gradient(ellipse at center, rgba(0,10,30,0.35) 0%, rgba(0,10,30,0.72) 62%, rgba(0,10,30,0.96) 100%),
+        linear-gradient(to bottom, rgba(0,10,30,0.55) 0%, rgba(0,10,30,0.15) 30%, rgba(0,10,30,0.25) 70%, var(--ink) 100%);}
+    .hero-in{position:relative;z-index:2;max-width:1100px;padding:0 24px}
+    .hero-mottos{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:34px;margin-bottom:14px}
+    .motto{font-family:var(--serif);font-style:italic;font-size:clamp(1.15rem,2.4vw,2.05rem);letter-spacing:.14em;color:var(--white);opacity:.92}
+    .motto.l{text-align:right}.motto.r{text-align:left;font-style:normal;letter-spacing:.32em}
+    .hero-crest{width:clamp(110px,11vw,150px);filter:drop-shadow(0 0 34px rgba(212,175,95,0.45));animation:crest 5s ease-in-out infinite}
+    @keyframes crest{0%,100%{filter:drop-shadow(0 0 28px rgba(212,175,95,0.35))}50%{filter:drop-shadow(0 0 54px rgba(212,175,95,0.6))}}
+    .hero-title{font-family:var(--serif);font-weight:700;text-transform:uppercase;line-height:.92;letter-spacing:.04em;font-size:clamp(2.7rem,8.2vw,6.9rem);text-shadow:0 4px 40px rgba(0,0,0,0.6)}
+    .hero-title span{display:block}
+    .hero-title .sm{font-size:.62em;letter-spacing:.1em;margin-top:.12em}
+    .hero-sub{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--gold-hi);font-size:clamp(1.9rem,4vw,3.2rem);letter-spacing:.06em;margin:12px 0 16px;text-shadow:0 2px 24px rgba(0,0,0,0.6)}
+    .kicker{font-family:var(--sans);font-weight:600;font-size:clamp(.7rem,1.1vw,.86rem);letter-spacing:.38em;text-transform:uppercase;color:var(--gold)}
+    .hero-lede{font-size:clamp(1.1rem,1.9vw,1.55rem);font-weight:400;color:var(--white);max-width:760px;margin:16px auto 30px;line-height:1.55;text-shadow:0 2px 20px rgba(0,0,0,0.7)}
+    .hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+    .hero-note{position:absolute;left:18px;bottom:18px;z-index:2;max-width:440px;text-align:left;font-size:.78rem;color:var(--muted);background:rgba(0,10,30,0.6);border:1px solid var(--line-soft);border-radius:8px;padding:9px 13px}
+    .hero-scroll{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:2;font-family:var(--mono);font-size:10px;letter-spacing:.3em;color:var(--muted);text-transform:uppercase}
+    @media (max-width:700px){
+      .hero{flex-direction:column}
+      .hero-mottos{grid-template-columns:1fr;gap:10px}
+      .motto.l,.motto.r{text-align:center}
+      .motto.l{order:2}.hero-crest{order:1;margin:0 auto}.motto.r{order:3}
+      .hero-note{position:static;margin:28px auto 0;max-width:92%}
+      .hero-scroll{display:none}
     }
-    @media (max-width: 960px) {
-      .mission-band-4 .container { grid-template-columns: repeat(2,1fr) !important; }
-    }
-    @media (max-width: 600px) {
-      .mission-band-4 .container { grid-template-columns: 1fr !important; }
-    }
-    .mission-pillar--vtcnze {
-      border-left: 2px solid rgba(26,188,156,0.3);
-    }
-    .mission-pillar--vtcnze h3 { color: #9efff0; }
-    .mission-pillar--vtcnze p { color: rgba(26,188,156,0.75); }
+    @media (prefers-reduced-motion:reduce){ .hero video{display:none} .hero-crest{animation:none} }
 
+    /* ── TICKER ── */
+    .ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink-2);overflow:hidden;white-space:nowrap}
+    .ticker-track{display:inline-flex;gap:34px;padding:14px 0;animation:tick 60s linear infinite;font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+    .ticker-track span:nth-child(even){color:var(--muted)}
+    @keyframes tick{to{transform:translateX(-50%)}}
 
-    /* ── QVN / QSAFP INSERTED LEGACY SECTIONS ── */
-    .qvn-showcase-section {
-      padding: 90px 0;
-      background: #020407;
-      border-top: 1px solid rgba(0,255,255,0.10);
-      border-bottom: 1px solid rgba(201,168,76,0.10);
-    }
-    .qvn-showcase-section:nth-of-type(even) { background: #08090f; }
-    .qvn-showcase-head {
-      text-align: center;
-      max-width: 900px;
-      margin: 0 auto 28px;
-    }
-    .qvn-showcase-title {
-      font-family: var(--font-display);
-      color: var(--white);
-      font-size: clamp(1.45rem, 3vw, 2.2rem);
-      font-weight: 600;
-      letter-spacing: .03em;
-      margin-bottom: 10px;
-    }
-    .qvn-showcase-title em { color: #9efff0; font-style: italic; }
-    .qvn-showcase-kicker {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      color: #18f5de;
-      margin-bottom: 10px;
-      display: block;
-    }
-    .qvn-embed-frame {
-      display: block;
-      width: min(980px, 92vw);
-      height: 460px;
-      margin: 0 auto;
-      border: 1px solid rgba(0,255,255,0.18);
-      border-radius: var(--r-lg);
-      box-shadow: 0 25px 70px rgba(0,0,0,.45), 0 0 60px rgba(0,255,255,.06);
-      background: #000;
-      overflow: hidden;
-    }
-    .qvn-embed-frame--wide { width: min(1120px, 94vw); height: 580px; }
-    .qvn-embed-frame--demo { width: min(980px, 94vw); height: 560px; }
+    /* ── SECTION BASICS ── */
+    section{position:relative}
+    .sec{padding:120px 0}
+    .eyebrow{display:block;font-family:var(--sans);font-weight:600;font-size:.76rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+    .h2{font-family:var(--serif);font-weight:600;font-size:clamp(2.2rem,4.6vw,3.7rem);line-height:1.04;letter-spacing:.01em}
+    .h2 em{font-style:italic;color:var(--gold-hi);font-weight:500}
+    .lead{font-size:1.12rem;color:var(--dim);max-width:760px;margin-top:20px}
+    .center{text-align:center}.center .lead{margin-left:auto;margin-right:auto}
+    .rule{width:120px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:26px auto}
 
-    .qvn-section-hero-title {
-      font-family: var(--font-display);
-      font-size: clamp(2.4rem, 5vw, 4.3rem);
-      line-height: 0.96;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      color: var(--white);
-      margin: 0 0 18px;
-    }
-    .qvn-section-hero-title em {
-      color: #9efff0;
-      font-style: italic;
-      font-weight: 600;
-    }
-    .qvn-section-subtitle {
-      color: var(--white-dim);
-      font-size: 1rem;
-      line-height: 1.75;
-      max-width: 760px;
-      margin: 0 auto;
-      font-weight: 300;
-    }
-    .qvn-demo-guidance {
-      max-width: 780px;
-      margin: -8px auto 30px;
-      color: var(--white-dim);
-      font-family: var(--font-mono);
-      font-size: 0.92rem;
-      line-height: 1.8;
-      text-align: left;
-      background: rgba(0,0,0,0.28);
-      border: 1px solid rgba(0,255,255,0.12);
-      border-radius: var(--r-lg);
-      padding: 24px 28px;
-    }
-    .qvn-demo-guidance strong {
-      display: block;
-      color: var(--white);
-      font-family: var(--font-display);
-      font-size: 1.15rem;
-      letter-spacing: 0.01em;
-      margin-bottom: 12px;
-    }
-    .qvn-demo-guidance ol {
-      margin: 0 0 18px 1.25rem;
-      padding: 0;
-    }
-    .qvn-demo-guidance li { margin: 3px 0; }
-    .qvn-demo-guidance .qvn-demo-closing {
-      color: var(--white);
-      font-family: var(--font-display);
-      font-size: 1.25rem;
-      font-weight: 600;
-      line-height: 1.45;
-      margin: 0;
-    }
-    @media (max-width: 700px) {
-      .qvn-showcase-section { padding: 64px 0; }
-      .qvn-embed-frame { height: 360px; }
-      .qvn-embed-frame--wide { height: 420px; }
-      .qvn-embed-frame--demo { height: 500px; }
+    /* ── SRO MANDATE ── */
+    .mandate{background:
+        radial-gradient(ellipse at 50% 0%, rgba(212,175,95,0.08), transparent 60%), var(--ink)}
+    .mandate{overflow:hidden}
+    .mandate::before{content:'';position:absolute;left:50%;top:0;width:min(1000px,130vw);aspect-ratio:1552/1600;transform:translate(-50%,-6%);background:url('bwrci-emblem.jpg') center/contain no-repeat;opacity:.17;pointer-events:none;-webkit-mask-image:radial-gradient(circle, #000 32%, transparent 68%);mask-image:radial-gradient(circle, #000 32%, transparent 68%)}
+    .mandate>.wrap{position:relative;z-index:1}
+    .mandate-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:64px}
+    .mcard{background:rgba(3,13,36,0.72);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:var(--r-lg);padding:30px 26px;position:relative}
+    .mcard .num{font-family:var(--serif);font-size:2.4rem;color:var(--gold);line-height:1;font-weight:600}
+    .mcard h3{font-family:var(--serif);font-size:1.45rem;font-weight:600;margin:14px 0 10px}
+    .mcard p{font-size:.94rem;color:var(--dim);line-height:1.65}
+    @media (max-width:1000px){.mandate-grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:600px){.mandate-grid{grid-template-columns:1fr}}
+
+    /* ── CHARTER INDEX ── */
+    .index{background:var(--ink-2);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+    .index-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:60px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden}
+    .icard{background:var(--ink-2);padding:34px 30px 30px;display:flex;flex-direction:column;gap:10px;transition:background .25s}
+    .icard:hover{background:#0a1838}
+    .icard .roman{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:1.1rem;letter-spacing:.12em}
+    .icard h3{font-family:var(--serif);font-size:1.75rem;font-weight:600;line-height:1.1}
+    .icard .dom{font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;color:var(--muted)}
+    .icard p{font-size:.95rem;color:var(--dim);flex:1}
+    .icard .go{font-size:.88rem;font-weight:500;color:var(--gold-hi)}
+    @media (max-width:960px){.index-grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:600px){.index-grid{grid-template-columns:1fr}}
+
+    .status{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;padding:4px 10px;border-radius:999px;border:1px solid;width:max-content}
+    .status::before{content:'';width:6px;height:6px;border-radius:50%;background:currentColor;box-shadow:0 0 8px currentColor}
+    .s-live{color:#7cf0a8;border-color:rgba(124,240,168,0.35)}
+    .s-sim{color:#ffd166;border-color:rgba(255,209,102,0.35)}
+    .s-soon{color:#9fb6ff;border-color:rgba(159,182,255,0.35)}
+
+    /* ── CHARTER SECTIONS ── */
+    .charter{padding:130px 0;border-top:1px solid var(--line-soft);overflow:hidden}
+    .charter:nth-of-type(even){background:var(--ink-2)}
+    .charter-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:80px;align-items:center}
+    .charter.flip .charter-art{order:-1}
+    .charter-meta{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:22px}
+    .charter-no{font-family:var(--serif);font-style:italic;font-size:1.2rem;color:var(--gold);letter-spacing:.1em}
+    .charter-dom{font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;color:var(--dim);border-bottom:1px solid var(--line)}
+    .charter-dom:hover{color:var(--gold-hi)}
+    .charter-title{font-family:var(--serif);font-weight:700;text-transform:uppercase;font-size:clamp(2.3rem,4.6vw,3.8rem);line-height:.98;letter-spacing:.03em}
+    .charter-title em{display:block;text-transform:none;font-style:italic;font-weight:500;color:var(--gold-hi);font-size:.72em;letter-spacing:.03em;margin-top:10px}
+    .charter-role{font-family:var(--sans);font-weight:600;font-size:.74rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin:22px 0 18px}
+    .charter-copy>p{color:var(--dim);font-size:1.04rem;margin-bottom:14px}
+    .charter-copy>p strong{color:var(--white);font-weight:500}
+    .points{list-style:none;margin:24px 0 30px;display:grid;gap:12px}
+    .points li{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:start;font-size:.97rem;color:var(--dim)}
+    .points li b{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:1.15rem;font-weight:600;line-height:1.5}
+    .points li strong{color:var(--white);font-weight:500}
+    .charter-ctas{display:flex;gap:12px;flex-wrap:wrap}
+    .sro-line{margin-top:26px;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--muted);border-left:2px solid var(--line);padding-left:12px;line-height:1.6}
+    @media (max-width:960px){
+      .charter-grid{grid-template-columns:1fr;gap:54px}
+      .charter.flip .charter-art{order:0}
     }
 
+    /* ── CYBERG LEAD-IN (above Charter I) ── */
+    .lead-in{padding:96px 0 0;text-align:center;border-top:1px solid var(--line-soft);background:radial-gradient(ellipse 60% 70% at 50% 55%, rgba(212,175,95,0.07), transparent 100%), var(--ink)}
+    .lead-in q{display:block;font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(1.8rem,4vw,3.2rem);line-height:1.2;color:var(--white);max-width:980px;margin:0 auto;quotes:"\201C" "\201D"}
+    .lead-in q em{color:var(--gold-hi);font-style:italic}
+    .lead-in q sup{font-size:.4em;font-style:normal;vertical-align:super;color:var(--gold)}
+    .lead-in .rule{margin:34px auto 0}
+    .lead-in + .charter{border-top:none;padding-top:80px;background:var(--ink)}
+
+    /* ── CYBERG EDUCATION (before PieLogic) ── */
+    .cyberg-ed{padding:120px 0 110px;text-align:center;border-top:1px solid var(--line-soft);background:var(--ink)}
+    .cyberg-ed .h2{text-transform:uppercase;letter-spacing:.04em;font-weight:700}
+    .cyberg-ed .h2 sup{font-size:.35em;vertical-align:super;color:var(--gold);font-weight:500}
+    .cyberg-ed .h2 em{display:block;text-transform:none;font-size:.62em;letter-spacing:.02em;margin-top:10px}
+    .cy-banner{display:block;position:relative;margin:54px auto 0;max-width:1280px;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 90px rgba(0,0,0,0.6),0 0 90px rgba(95,240,220,0.08);transition:transform .35s,box-shadow .35s}
+    .cy-banner img{width:100%;height:auto;aspect-ratio:1860/815;object-fit:cover;transition:transform 1.2s ease}
+    .cy-banner:hover{transform:translateY(-3px);box-shadow:0 36px 100px rgba(0,0,0,0.65),0 0 110px rgba(241,215,143,0.16)}
+    .cy-banner:hover img{transform:scale(1.03)}
+    .cy-banner::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center, transparent 55%, rgba(0,10,30,0.55) 100%);pointer-events:none}
+    .cy-cta-row{margin-top:30px}
+    .cy-cta{display:inline-flex;align-items:center;gap:10px;background:var(--gold-grad);color:#1a1206;font-weight:600;font-size:.95rem;padding:12px 24px;border-radius:999px;box-shadow:0 10px 36px rgba(212,175,95,0.4);white-space:nowrap}
+    @media (max-width:600px){.cyberg-ed{padding:90px 0 80px}.cy-banner{margin-top:36px}.cy-cta{font-size:.85rem;padding:11px 20px;white-space:normal}}
+
+    /* art frames */
+    .frame{position:relative;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,0.55),0 0 80px rgba(212,175,95,0.08)}
+    .cap{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;color:var(--muted);margin-top:12px;text-align:center}
+
+    /* I — Final Say: covers */
+    .covers{position:relative;height:540px}
+    .covers img{position:absolute;width:62%;border-radius:6px;box-shadow:0 40px 90px rgba(0,0,0,0.7),0 0 0 1px rgba(212,175,95,0.25)}
+    .covers .c1{left:2%;top:0;transform:rotate(-4deg);z-index:2}
+    .covers .c2{right:2%;top:60px;transform:rotate(5deg);z-index:1;filter:brightness(.82)}
+    .quad{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:24px 0 30px}
+    .quad div{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+    .quad b{display:block;font-family:var(--serif);font-style:italic;color:var(--gold);font-size:1.05rem}
+    .quad span{font-family:var(--serif);font-size:1.25rem;font-weight:600;color:var(--white);line-height:1.2}
+    @media (max-width:600px){.covers{height:400px}}
+
+    /* II — OCUP */
+    .invariant{font-family:var(--serif);font-style:italic;font-size:clamp(1.35rem,2.2vw,1.7rem);line-height:1.35;color:var(--white);border-left:2px solid var(--gold);padding:4px 0 4px 22px;margin:8px 0 26px}
+    .invariant em{color:var(--gold-hi)}
+    .ladder{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 30px}
+    .rung{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:16px}
+    .rung .ph{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+    .rung h4{font-family:var(--serif);font-size:1.15rem;font-weight:600;margin:6px 0 4px;line-height:1.2}
+    .rung p{font-size:.84rem;color:var(--muted);line-height:1.5}
+    .rung.done{border-color:rgba(124,240,168,0.35)}
+    @media (max-width:600px){.ladder{grid-template-columns:1fr}}
+
+    /* III — QVN */
+    .qvn{padding:130px 0 40px;background:#020407;border-top:1px solid rgba(95,240,220,0.12)}
+    .qvn .charter-title em,.qvn .h2 em{color:#9efff0}
+    .qvn-head{max-width:900px;margin:0 auto 70px;text-align:center}
+    .qvn-head .charter-meta{justify-content:center}
+    .qvn-head .lead{margin-left:auto;margin-right:auto}
+    .qvn-trio{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px;text-align:left}
+    .qvn-trio div{background:rgba(95,240,220,0.04);border:1px solid rgba(95,240,220,0.16);border-radius:var(--r);padding:16px 18px}
+    .qvn-trio b{display:block;font-family:var(--serif);font-size:1.2rem;color:var(--white);font-weight:600}
+    .qvn-trio span{font-size:.86rem;color:var(--dim)}
+    @media (max-width:760px){.qvn-trio{grid-template-columns:1fr}}
+    .qvn-panel{padding:70px 0;border-top:1px solid rgba(95,240,220,0.08)}
+    .qvn-panel-head{text-align:center;max-width:900px;margin:0 auto 30px}
+    .qvn-panel-title{font-family:var(--serif);font-size:clamp(2.1rem,4.4vw,3.6rem);line-height:1;font-weight:700;letter-spacing:-0.01em}
+    .qvn-panel-title em{color:#9efff0;font-style:italic;font-weight:600}
+    .qvn-panel-sub{color:var(--dim);margin-top:14px}
+    .qvn-kicker{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#18f5de;display:block;margin-bottom:10px}
+    .qvn-embed-frame{display:block;width:min(980px,92vw);height:460px;margin:0 auto;border:1px solid rgba(0,255,255,0.18);border-radius:var(--r-lg);box-shadow:0 25px 70px rgba(0,0,0,.45),0 0 60px rgba(0,255,255,.06);background:#000;overflow:hidden}
+    .qvn-embed-frame--wide{width:min(1120px,94vw);height:580px}
+    .qvn-embed-frame--demo{width:min(980px,94vw);height:560px}
+    .qvn-demo-guidance{max-width:780px;margin:0 auto 30px;color:var(--dim);font-family:var(--mono);font-size:.9rem;line-height:1.8;background:rgba(0,0,0,0.3);border:1px solid rgba(0,255,255,0.12);border-radius:var(--r-lg);padding:24px 28px}
+    .qvn-demo-guidance strong{display:block;color:var(--white);font-family:var(--serif);font-size:1.2rem;margin-bottom:12px;font-weight:600}
+    .qvn-demo-guidance ol{margin:0 0 18px 1.25rem}
+    .qvn-demo-guidance li{margin:3px 0}
+    .qvn-demo-closing{color:var(--white);font-family:var(--serif);font-size:1.3rem;font-weight:600;line-height:1.45}
+    @media (max-width:700px){
+      .qvn-embed-frame{height:360px}.qvn-embed-frame--wide{height:420px}.qvn-embed-frame--demo{height:500px}
+    }
+
+    /* IV — Quorum ring */
+    .quorum{position:relative;aspect-ratio:1/1;max-width:520px;margin:0 auto}
+    .quorum::before{content:'';position:absolute;inset:9%;border-radius:50%;border:1px dashed rgba(212,175,95,0.35);animation:spin 80s linear infinite}
+    .quorum::after{content:'';position:absolute;inset:24%;border-radius:50%;background:radial-gradient(circle, rgba(212,175,95,0.22), transparent 70%)}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .q-core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:34%;aspect-ratio:1/1;border-radius:50%;background:radial-gradient(circle at 40% 35%, #fff6d2 0%, #f1d78f 22%, #b88a33 70%, #5c4114 100%);box-shadow:0 0 70px rgba(241,215,143,0.55);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#1a1206;z-index:2}
+    .q-core b{font-family:var(--serif);font-weight:700;font-size:clamp(1rem,2.4vw,1.45rem);letter-spacing:.08em}
+    .q-core span{font-family:var(--mono);font-size:clamp(.5rem,1vw,.62rem);letter-spacing:.16em;text-transform:uppercase}
+    .q-seat{position:absolute;width:21%;aspect-ratio:1/1;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:rgba(0,10,30,0.85);border:1px solid var(--c);box-shadow:0 0 26px color-mix(in srgb,var(--c) 45%,transparent), inset 0 0 22px color-mix(in srgb,var(--c) 25%,transparent);z-index:2;transform:translate(-50%,-50%)}
+    .q-seat b{font-family:var(--serif);font-size:clamp(.85rem,1.8vw,1.08rem);font-weight:600;color:var(--white);line-height:1.1}
+    .q-seat span{font-family:var(--mono);font-size:clamp(.46rem,.9vw,.56rem);letter-spacing:.1em;text-transform:uppercase;color:var(--c)}
+    .q-lines{position:absolute;inset:0;z-index:1}
+    .ally-tag{display:inline-block;font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid var(--line);border-radius:999px;padding:5px 12px;margin-bottom:22px}
+
+    /* V — PieLogic shelf */
+    .shelf{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;align-items:end}
+    .book{text-align:center}
+    .book .cover{border-radius:5px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,0.6),0 0 0 1px rgba(212,175,95,0.22);background:#0a1430;transition:transform .3s}
+    .book:hover .cover{transform:translateY(-6px)}
+    .book .mid{transform:scale(1.08);transform-origin:bottom center}
+    .book h4{font-family:var(--serif);font-size:1.08rem;font-weight:600;margin-top:16px;line-height:1.2}
+    .book small{font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+    .npc-rot{position:relative;aspect-ratio:2/3}
+    .npc-rot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.2s}
+    .npc-rot img.on{opacity:1}
+    .npc-soon{position:absolute;top:8px;right:8px;z-index:3;font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;background:var(--gold-grad);color:#1a1206;font-weight:700;padding:4px 8px;border-radius:999px}
+    .taglines{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 30px}
+    .taglines span{font-family:var(--serif);font-style:italic;font-size:1.08rem;color:var(--gold-hi);border:1px solid var(--line);border-radius:999px;padding:5px 14px}
+    @media (max-width:600px){.shelf{gap:10px}.book h4{font-size:.9rem}}
+
+    /* VI — DigiPie */
+    .pie-wrap{position:relative;max-width:500px;margin:0 auto;aspect-ratio:1/1}
+    .pie{position:absolute;inset:14%;border-radius:50%;
+      background:conic-gradient(from -90deg,#f1d78f 0 25%,#c79a45 0 50%,#8a6a2c 0 75%,#e4c271 0 100%);
+      box-shadow:0 0 90px rgba(212,175,95,0.25);animation:spin 40s linear infinite}
+    .pie::after{content:'';position:absolute;inset:30%;border-radius:50%;background:var(--ink-2);box-shadow:inset 0 0 30px rgba(0,0,0,0.8)}
+    .pie-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;z-index:2}
+    .pie-center b{font-family:var(--serif);font-size:clamp(1.6rem,3.4vw,2.3rem);font-weight:700;letter-spacing:.06em}
+    .pie-center span{font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+    .pie-label{position:absolute;font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);background:rgba(0,10,30,0.8);border:1px solid var(--line);border-radius:999px;padding:5px 11px;white-space:nowrap}
+    .soon-ribbon{position:absolute;left:50%;bottom:2%;transform:translateX(-50%);z-index:3}
+
+    /* ── IN MOTION (attached under the charter grid) ── */
+    .index-grid.attached{border-radius:var(--r-lg) var(--r-lg) 0 0;border-bottom:none}
+    .motion{border:1px solid var(--line);border-top:2px solid var(--line);border-radius:0 0 var(--r-lg) var(--r-lg);background:linear-gradient(180deg,#06112b 0%,var(--ink-2) 100%);padding:34px 30px 32px}
+    .motion-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+    .motion-head .roman{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:1.1rem;letter-spacing:.12em}
+    .motion-head h3{font-family:var(--serif);font-size:1.75rem;font-weight:600;line-height:1.1}
+    .motion-head p{font-size:.9rem;color:var(--muted)}
+    .motion-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;align-items:start}
+    .mvid{display:flex;flex-direction:column;gap:10px}
+    .mvid-frame{position:relative;aspect-ratio:16/9;border-radius:var(--r);overflow:hidden;background:#000;border:1px solid var(--line);box-shadow:0 20px 50px rgba(0,0,0,0.5)}
+    .mvid.short .mvid-frame{aspect-ratio:9/16;max-height:640px;margin:0 auto;width:min(100%,360px)}
+    .mvid-frame iframe,.mvid-frame img{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
+    .mvid-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,rgba(0,10,30,0.05),rgba(0,10,30,0.55));border:0;cursor:pointer;color:#1a1206}
+    .mvid-play span{width:72px;height:72px;border-radius:50%;background:var(--gold-grad);display:flex;align-items:center;justify-content:center;font-size:1.6rem;padding-left:5px;box-shadow:0 10px 40px rgba(212,175,95,0.5);transition:transform .2s}
+    .mvid-play:hover span{transform:scale(1.08)}
+    .mvid-label{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+    .mvid-cap{font-family:var(--serif);font-size:1.2rem;font-weight:600;color:var(--white);line-height:1.25}
+    @media (max-width:760px){.motion-grid{grid-template-columns:1fr}.motion{padding:26px 18px}}
+
+    /* ── QUOTE ── */
+    .quote{padding:110px 0;text-align:center;background:radial-gradient(ellipse at center, rgba(212,175,95,0.07), transparent 65%), var(--ink)}
+    .quote blockquote{font-family:var(--serif);font-style:italic;font-size:clamp(1.5rem,3vw,2.3rem);line-height:1.35;max-width:920px;margin:0 auto}
+    .quote cite{display:block;margin-top:24px;font-style:normal;font-family:var(--mono);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+
+    /* ── CLOSING ── */
+    .closing{position:relative;padding:140px 0 130px;text-align:center;overflow:hidden;border-top:1px solid var(--line)}
+    .closing::before{content:'';position:absolute;left:50%;top:50%;width:min(1100px,140vw);aspect-ratio:1552/1600;transform:translate(-50%,-50%);background:url('bwrci-emblem.jpg') center/contain no-repeat;opacity:.22;-webkit-mask-image:radial-gradient(circle, #000 35%, transparent 70%);mask-image:radial-gradient(circle, #000 35%, transparent 70%)}
+    .closing .wrap{position:relative}
+    .closing img.crest{width:clamp(150px,18vw,220px);margin:0 auto 26px;filter:drop-shadow(0 0 40px rgba(212,175,95,0.45))}
+    .closing .h2{text-transform:uppercase;letter-spacing:.05em}
+
+    /* ── FOOTER ── */
+    footer{background:#00071a;border-top:1px solid var(--line);padding:70px 0 40px;font-size:.88rem;color:var(--muted)}
+    .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:50px}
+    .foot-brand{display:flex;gap:14px;align-items:flex-start}
+    .foot-brand img{width:54px}
+    .foot-brand b{display:block;font-family:var(--serif);color:var(--white);font-size:1.2rem;font-weight:600;letter-spacing:.06em}
+    footer h5{font-family:var(--sans);font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;font-weight:600}
+    footer ul{list-style:none;display:grid;gap:7px}
+    footer a:hover{color:var(--gold-hi)}
+    .fine{margin-top:50px;padding-top:26px;border-top:1px solid var(--line-soft);font-size:.78rem;line-height:1.7;display:grid;gap:8px}
+    @media (max-width:800px){.foot-grid{grid-template-columns:1fr}}
+
+    /* reveal */
+    .rv{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+    .rv.in{opacity:1;transform:none}
+    @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}}
   </style>
 </head>
 <body>
+<a href="#main" class="skip">Skip to content</a>
 
-<div id="nav-placeholder"></div>
+<!-- ═════════ NAV ═════════ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="brand"><img src="bwrci-crest.png" alt="" />BWRCI <em>· The SRO Hub</em></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="nav-links" id="navLinks" aria-label="Main">
+      <a href="#mandate">The SRO</a>
+      <a href="#finalsay">Final Say</a>
+      <a href="#ocup">OCUP</a>
+      <a href="#qvn">QVN</a>
+      <a href="#aicomsci">Quorum</a>
+      <a href="#pielogic">PieLogic</a>
+      <a href="#digipie">DigiPie</a>
+      <a href="https://scheduler.zoom.us/maxbruce-max-d/max_remotes" target="_blank" rel="noopener" class="nav-cta">Appointments</a>
+    </nav>
+  </div>
+</header>
 
-<!-- HERO -->
-<section class="home-hero">
-  <div class="hero-ticker">
-    <div class="ticker-track">
-      <span>This is not a think tank. It's a build tank.</span>
-      <span>·</span>
-      <span>The wealth of nations belongs to the people of each nation, first</span>
-      <span>·</span>
-      <span>Etching humanity's veto into silicon</span>
-      <span>·</span>
-      <span>National Autonomous Economies · SaaS Testbeds</span>
-      <span>·</span>
-      <span>VTCNZE · Stacking the Future of Energy</span>
-      <span>·</span>
-      <span>When the timing is right — we go open-core</span>
-      <span>·</span>
-      <span>This is not a think tank. It's a build tank.</span>
-      <span>·</span>
-      <span>The wealth of nations belongs to the people of each nation, first</span>
-      <span>·</span>
-      <span>Etching humanity's veto into silicon</span>
-      <span>·</span>
-      <span>National Autonomous Economies · SaaS Testbeds</span>
-      <span>·</span>
-      <span>VTCNZE · Stacking the Future of Energy</span>
-      <span>·</span>
-      <span>When the timing is right — we go open-core</span>
-      <span>·</span>
+<!-- ═════════ HERO ═════════ -->
+<section class="hero" id="top">
+  <img class="hero-poster" src="bwrci-bg-poster.jpg" alt="" aria-hidden="true" />
+  <video autoplay muted loop playsinline preload="auto" poster="bwrci-bg-poster.jpg" aria-hidden="true">
+    <source src="bwrci-bg.webm" type="video/webm" />
+    <source src="bwrci-bg.mp4" type="video/mp4" />
+  </video>
+  <div class="hero-in">
+    <div class="hero-mottos">
+      <span class="motto l">In Hoc Una Sumus</span>
+      <img class="hero-crest" src="bwrci-crest.png" alt="BWRCI crest — “We’re in this together”" />
+      <span class="motto r">在此同心</span>
+    </div>
+    <h1 class="hero-title"><span>Better World</span><span class="sm">Regulatory Coalition</span></h1>
+    <p class="hero-sub">The SRO Hub</p>
+    <p class="kicker">Self-Regulatory Organization · For the Autonomous Era</p>
+    <p class="hero-lede">Because the wealth of nations belongs to the people of each nation, first. One coalition. Six charters. Humanity keeps the final say.</p>
+    <div class="hero-ctas">
+      <a href="#charters" class="btn btn-gold">Explore the Six Charters ↓</a>
+      <a href="#mandate" class="btn btn-line">What is an SRO?</a>
     </div>
   </div>
-
-  <div class="hero-body" style="justify-content:space-between;gap:48px;align-items:center;">
-    <div class="hero-text" style="display:flex;flex-direction:column;justify-content:center;flex:1 1 1000px;max-width:100%;">
-      <div class="hero-flag">
-        <span class="hero-flag-line"></span>
-        <span class="hero-flag-text">National Autonomous Economies · SaaS Testbeds</span>
-      </div>
-
-      <h1 class="hero-title">
-        Better World<br/>
-        <em>Regulatory Coalition</em>
-      </h1>
-
-      <p class="hero-mandate">
-        Because the wealth of nations belongs to the people of each nation, first.
-        A global alliance building the infrastructure of shared prosperity.
-      </p>
-
-      <div class="hero-ctas">
-        <a href="recommend.html" class="btn btn-gold btn-lg">Recommend a Testbed Nation</a>
-        <a href="https://scheduler.zoom.us/maxbruce-max-d/max_remotes" target="_blank" rel="noopener" class="btn btn-outline btn-lg">Book an Appointment</a>
-        <a href="qsafp.html" class="btn btn-ghost btn-lg">Explore QSAFP</a>
-      </div>
-
-      <div class="hero-stats">
-        <div>
-          <span class="hero-stat-num">4</span>
-          <span class="hero-stat-label">Active Protocols</span>
-        </div>
-        <div>
-          <span class="hero-stat-num">PAE</span>
-          <span class="hero-stat-label">People's Autonomous Economy</span>
-        </div>
-        <div>
-          <span class="hero-stat-num">Open</span>
-          <span class="hero-stat-label">Core Architecture</span>
-        </div>
-        <div>
-          <span class="hero-stat-num">∞</span>
-          <span class="hero-stat-label">Nations Eligible</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- BWRCI CREST -->
-    <div class="hero-crest">
-      <img src="bwrci-presents-card.png" alt="BWRCI.ORG — The Better World Regulatory Coalition Inc." />
-    </div>
-  </div>
-
-  <div class="hero-scroll">
-    <span>Scroll</span>
-    <div class="hero-scroll-line"></div>
-  </div>
+  <p class="hero-note">Background: an AI-generated visualization of the people-first network. You are the center of it.</p>
+  <span class="hero-scroll">Scroll</span>
 </section>
 
-<!-- ABOUT -->
-<section class="about-section">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-text">
-        <span class="eyebrow">About BWRCI</span>
-        <h2 class="section-title">Founded on the principle that <em>intelligence and wealth</em> should be widely distributed</h2>
-        <p>BWRCI is founded on the principle that when intelligence and wealth are securely and widely distributed, humanity gains unprecedented capacity to comprehend and improve our world.</p>
-        <p>From AI fail-safes and quantum-resilient security to digital equity markets and sovereign-safe economic architectures, BWRCI believes in a global alliance of innovators, institutions, and communities toward a more accountable, inclusive, and prosperous world.</p>
-        <p><strong>BWRCI's mission</strong> is to enable people to monetize their consumption of goods and services using blockchain contracts and CETEs — creating a self-perpetuating, virtuous economy of consumption and growth without speculation.</p>
-        <p>We pledge to empower business entities with innovative technological tools that promote fierce loyalties among consumers while producing stronger, more responsible communities by better incentivizing mutually beneficial goals.</p>
-        <div style="display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;">
-          <a href="https://img1.wsimg.com/blobby/go/75f5b0fa-4cdc-4ad1-ad94-58e64e0039f5/BWRCI-SitePDF%20(1)-8fc0cce.pdf" class="btn btn-download" target="_blank" download>
-            📄 PAE Overview PDF
-          </a>
-          <a href="https://img1.wsimg.com/blobby/go/75f5b0fa-4cdc-4ad1-ad94-58e64e0039f5/CETEs-BWRCI-SitePDF.pdf" class="btn btn-download" target="_blank" download>
-            📄 CETEs Overview PDF
-          </a>
-        </div>
-      </div>
-      <div>
-        <a href="https://ocup.ai/global-proposal.html" target="_blank" class="about-whitepaper-link" aria-label="Read The Better AI Race whitepaper — A WAICO–OSAA Bridge for Competitive Autonomy">
-          <img
-            src="OCUP_Better_AI_Race_LinkedIn_Cover.png"
-            alt="The Better AI Race — A WAICO–OSAA Bridge for Competitive Autonomy — Discussion Whitepaper by Temporal Authority Systems PBC"
-            class="about-whitepaper-img"
-          />
-        </a>
-        <p style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--white-muted);margin-top:10px;text-align:center;">
-          Discussion Whitepaper — <a href="https://ocup.ai/global-proposal.html" target="_blank" style="color:var(--gold-dim);">ocup.ai/global-proposal.html</a>
-        </p>
-      </div>
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>This is not a think tank. It's a build tank.</span><span>·</span>
+    <span>The wealth of nations belongs to the people of each nation, first</span><span>·</span>
+    <span>Etching humanity's veto into silicon</span><span>·</span>
+    <span>National Autonomous Economies · SaaS Testbeds</span><span>·</span>
+    <span>Every AI node is a contract</span><span>·</span>
+    <span>When the timing is right — we go open-core</span><span>·</span>
+    <span>This is not a think tank. It's a build tank.</span><span>·</span>
+    <span>The wealth of nations belongs to the people of each nation, first</span><span>·</span>
+    <span>Etching humanity's veto into silicon</span><span>·</span>
+    <span>National Autonomous Economies · SaaS Testbeds</span><span>·</span>
+    <span>Every AI node is a contract</span><span>·</span>
+    <span>When the timing is right — we go open-core</span><span>·</span>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ═════════ THE SRO ═════════ -->
+<section class="sec mandate" id="mandate">
+  <div class="wrap center rv">
+    <span class="eyebrow">The Self-Regulatory Organization</span>
+    <h2 class="h2">One house. <em>One standard.</em><br/>Every initiative answers to it.</h2>
+    <div class="rule"></div>
+    <p class="lead">BWRCI is founded on the principle that when intelligence and wealth are securely and widely distributed, humanity gains unprecedented capacity to comprehend and improve our world. As the coalition's SRO, BWRCI holds each initiative below to a shared baseline — before any regulator has to ask.</p>
+  </div>
+  <div class="wrap">
+    <div class="mandate-grid">
+      <div class="mcard rv"><span class="num">I</span><h3>Common Standards</h3><p>One baseline for every charter: machines act only with authority humans grant, and economic value flows back to the people who create it.</p></div>
+      <div class="mcard rv"><span class="num">II</span><h3>Claims Discipline</h3><p>Every public claim is labeled as demonstrated, simulated or proposed. Evidence leads; bold statements follow.</p></div>
+      <div class="mcard rv"><span class="num">III</span><h3>Curated Participation</h3><p>Public entries, drawings and sign-ups across the coalition route through BWRCI as curator, under one data policy.</p></div>
+      <div class="mcard rv"><span class="num">IV</span><h3>Independence &amp; Attribution</h3><p>Naming an AI developer or partner never implies endorsement. Collaborators are credited, and the human keeps the final say.</p></div>
     </div>
   </div>
 </section>
 
-<!-- PROTOCOLS — 4 pillars -->
-<section class="protocols-section">
-  <div class="container">
-    <span class="eyebrow">Core Protocols</span>
-    <h2 class="section-title">Four pillars. One mission.</h2>
-    <p class="section-intro">Open-core infrastructure spanning economic participation, AI governance, asset protection, and clean energy infrastructure.</p>
-
-    <div class="protocols-grid-4">
-      <div class="protocol-card">
-        <span class="protocol-icon">🔷</span>
-        <span class="protocol-tag">Economic Framework</span>
-        <h3>PAE / CETEs</h3>
-        <p>The People's Autonomous Economy rewards everyday consumption with economic participation. Families do not merely spend into the system — they earn a stake in the growth their demand helps create. Wealth circulates. Trust compounds. Local economies begin to thrive as they become more self-reliant and self-perpetuating.</p>
-        <p style="margin-top:8px;"><strong style="color:var(--white);">CETEs</strong> — Consumer Earned Tokenized Equities — provide the non-speculative on-ramp: earned through participation, held with discipline, and designed for shared prosperity.</p>
-        <div class="protocol-links">
-          <a href="https://pielogic.com" target="_blank">Inclusionism: Finally! →</a>
-          <a href="https://img1.wsimg.com/blobby/go/75f5b0fa-4cdc-4ad1-ad94-58e64e0039f5/BWRCI-SitePDF%20(1)-8fc0cce.pdf" target="_blank" download>Download PAE PDF →</a>
-        </div>
+<!-- ═════════ CHARTER INDEX ═════════ -->
+<section class="sec index" id="charters">
+  <div class="wrap center rv">
+    <span class="eyebrow">The Six Charters</span>
+    <h2 class="h2">Six initiatives. <em>One mission.</em></h2>
+    <p class="lead">From the manifesto to the silicon, from the validators to the people's economy — each charter carries one part of the load.</p>
+  </div>
+  <div class="wrap">
+    <div class="index-grid attached">
+      <a class="icard rv" href="#finalsay"><span class="roman">Charter I</span><h3>The Final Say</h3><span class="dom">thefinalsay.org</span><p>The manifesto for the Autonomous Era and the proposed H.A.T. Treaty.</p><span class="status s-live">Live</span><span class="go">View charter →</span></a>
+      <a class="icard rv" href="#ocup"><span class="roman">Charter II</span><h3>OCUP</h3><span class="dom">ocup.ai</span><p>Temporal authority governance — from policy promises to testable boundaries.</p><span class="status s-live">Live</span><span class="go">View charter →</span></a>
+      <a class="icard rv" href="#qvn"><span class="roman">Charter III</span><h3>QVN</h3><span class="dom">Quorum Validator Network</span><p>Human validators renew — or deny — AI authority, one node at a time.</p><span class="status s-sim">Simulated demo</span><span class="go">Try the demo →</span></a>
+      <a class="icard rv" href="#aicomsci"><span class="roman">Charter IV</span><h3>The Quorum + One</h3><span class="dom">aicomsci.org</span><p>Allied Intelligence, assembled — five AI partners, one human keyholder.</p><span class="status s-live">Live</span><span class="go">View charter →</span></a>
+      <a class="icard rv" href="#pielogic"><span class="roman">Charter V</span><h3>PieLogic</h3><span class="dom">pielogic.com</span><p>The book and publication arm — Inclusionism and the works that follow.</p><span class="status s-live">Live</span><span class="go">View charter →</span></a>
+      <a class="icard rv" href="#digipie"><span class="roman">Charter VI</span><h3>DigiPie</h3><span class="dom">digipie.com</span><p>The People's Autonomous Economy, where consumption earns ownership.</p><span class="status s-soon">Coming soon</span><span class="go">View charter →</span></a>
+    </div>
+    <!-- IN MOTION — videos come from motion-videos.js (edit that file to swap videos) -->
+    <div class="motion" id="media">
+      <div class="motion-head">
+        <div><span class="roman">In Motion</span><h3>The charters, in their own words</h3></div>
+        <p>Watch · tap to play</p>
       </div>
-
-      <div class="protocol-card">
-        <span class="protocol-icon">🔐</span>
-        <span class="protocol-tag">Security Protocol</span>
-        <h3>AEGES / OCUP</h3>
-        <p>AEGES is asset protection with consequences. It makes theft economically futile by tracing value, locking corrupted paths, and preserving evidence after an attack. Not just a vault — a deterrence layer for the economy we are building.</p>
-        <p style="margin-top:8px;">If digital wealth is going to circulate at national scale, it needs armor that still matters after breach. AEGES protects the trust layer.</p>
-        <div class="protocol-links">
-          <a href="aeges.html">Full AEGES Page →</a>
-          <a href="http://getaeges.org" target="_blank">getaeges.org →</a>
-          <a href="https://github.com/AEGES-OPEN-CORE/AEGES" target="_blank">GitHub →</a>
-        </div>
-      </div>
-
-      <div class="protocol-card">
-        <span class="protocol-icon">🧠</span>
-        <span class="protocol-tag">AI Governance Protocol</span>
-        <h3>QSAFP / OCUP</h3>
-        <p>Temporal authority for AI and robotics. Autonomous systems receive bounded permission to operate, then must return to human-governed checkpoints. They cannot self-authorize, self-extend, or outrun the lease.</p>
-        <p style="margin-top:8px;">This is not monitoring. It is runtime authority: the line between useful autonomy and systems that keep going without us.</p>
-        <div class="protocol-links">
-          <a href="qsafp.html">Full QSAFP Page →</a>
-          <a href="http://qsafp.org" target="_blank">qsafp.org →</a>
-          <a href="https://github.com/QSAFP-Core/qsafp-open-core" target="_blank">GitHub →</a>
-        </div>
-      </div>
-
-      <div class="protocol-card protocol-card--vtcnze">
-        <span class="protocol-icon">⚡</span>
-        <span class="protocol-tag vtcnze-tag">Clean Energy Infrastructure</span>
-        <h3>VTCNZE</h3>
-        <p>Vertical Stack Technology Coalition For Near-Zero Emissions PBC is energy infrastructure for the AI-load era. VTCNZE places non-flammable sodium-ion storage on urban footprints, turning grid bottlenecks into community-participating power capacity near the load. Host communities are treated like they are 40% equity partners - flipping NIMBY to WIMBY.</p>
-        <p style="margin-top:8px;"><strong style="color:var(--white);">Target:</strong> ≈600 GWh of U.S. storage in ≈48 months, with 40% of profits permanently reserved for host communities. VTCNZE is the vehicle for CETEs to become ubiquitous.</p>
-        <div class="protocol-links">
-          <a href="https://verticalstack.energy" target="_blank" style="color:var(--teal);">verticalstack.energy →</a>
-        </div>
-      </div>
+      <div class="motion-grid" id="motionGrid"></div>
     </div>
   </div>
 </section>
 
+<!-- ═════════ CYBERG LEAD-IN ═════════ -->
+<div class="lead-in">
+  <div class="wrap rv">
+    <q>What if the next generation of leaders are <em>Cybergs</em><sup>™</sup>?</q>
+    <div class="rule"></div>
+  </div>
+</div>
 
-<!-- NO MORE NPCs — INCLUSIONISM YOUTH LANE -->
-<section class="npc-section" id="no-more-npcs" aria-label="No More NPCs slideshow preview" data-slide-interval="5000">
-  <img src="coming-soon-banner.png" alt="Coming soon" class="npc-coming-soon-badge" />
-  <div class="container npc-inner">
-    <div class="npc-stage">
-      <div class="npc-frame">
-        <figure class="npc-slide is-active">
-          <img src="no-more-npcs-uprising.png" alt="No More NPCs uprising cover" />
-        </figure>
-        <figure class="npc-slide">
-          <img src="no-more-npcs-glitch-awakening.png" alt="No More NPCs glitch awakening cover" />
-        </figure>
-        <figure class="npc-slide">
-          <img src="no-more-npcs-player-select.png" alt="No More NPCs player select cover" />
-        </figure>
-        <figure class="npc-slide">
-          <img src="no-more-npcs-treasure-map.png" alt="No More NPCs treasure map cover" />
-        </figure>
+<!-- ═════════ I — THE FINAL SAY ═════════ -->
+<section class="charter" id="finalsay">
+  <div class="wrap charter-grid">
+    <div class="charter-copy rv">
+      <div class="charter-meta"><span class="charter-no">Charter I</span><a class="charter-dom" href="https://thefinalsay.org" target="_blank" rel="noopener">thefinalsay.org ↗</a><span class="status s-live">Live</span></div>
+      <h2 class="charter-title">Human Intelligence<em>The Final Say</em></h2>
+      <p class="charter-role">The Manifesto</p>
+      <p><strong>The Autonomous Era has arrived. Let's keep humans in control.</strong> Competition can continue — but nations can agree on one baseline: machines may act only with authority humans grant, and they cannot grant it to themselves. This is <em>our</em> house.</p>
+      <p>Every autonomous system must answer four questions:</p>
+      <div class="quad">
+        <div><b>I</b><span>Who authorized it?</span></div>
+        <div><b>II</b><span>On what evidence?</span></div>
+        <div><b>III</b><span>For how long?</span></div>
+        <div><b>IV</b><span>With whose stake?</span></div>
       </div>
-      <div class="npc-dots" aria-label="No More NPCs slideshow controls"></div>
+      <div class="charter-ctas">
+        <a href="https://thefinalsay.org" target="_blank" rel="noopener" class="btn btn-gold btn-sm">Read the Free Edition →</a>
+        <a href="https://thefinalsay.org" target="_blank" rel="noopener" class="btn btn-line btn-sm">The H.A.T. Treaty</a>
+      </div>
+      <p class="sro-line">SRO note: the Human Authority Treaty (H.A.T.) is a discussion-draft proposal. No such treaty has been signed, and it is not endorsed or administered by WIPO.</p>
     </div>
-
-    <div class="npc-copy">
-      <span class="eyebrow">Second Book Overview</span>
-      <h2 class="npc-title">“No More<br/><em>NPCs”</em></h2>
-      <p class="npc-lede">
-        A youth-facing visual lane for <em>Inclusionism: Finally!</em> — moving from spectator economics to player economics, agency, ownership, and enlightened participation. The first book challenged leadership. This one speaks directly to the next generations. Dare to understand.
-      </p>
-      <div class="npc-actions">
-        <a href="https://pielogic.com/#no-more-npcs" target="_blank" class="btn btn-outline">Preview the Series →</a>
-        <span class="npc-note">4-cover preview · rotates every 5 seconds</span>
+    <div class="charter-art rv">
+      <div class="covers">
+        <img class="c1" src="https://thefinalsay.org/cover-en.jpg" alt="HUMAN INTELLIGENCE: The Final Say — English edition cover" loading="lazy" />
+        <img class="c2" src="https://thefinalsay.org/cover-zh.jpg" alt="HUMAN INTELLIGENCE: The Final Say — Simplified Chinese edition cover" loading="lazy" />
       </div>
+      <p class="cap">English &amp; Simplified Chinese editions · free download, no registration</p>
     </div>
   </div>
 </section>
 
-
-<!-- VTCNZE DEEP DIVE -->
-<section class="vtcnze-section">
-  <div class="container">
-    <div class="vtcnze-grid">
-      <div>
-        <span class="eyebrow" style="color:var(--teal);">New Coalition Member</span>
-        <h2 class="section-title">VTCNZE <em style="color:#9efff0;">—</em><br/>Stacking the Future<br/><em style="color:#9efff0;">of Energy</em></h2>
-        <p style="color:var(--white-dim);font-size:1rem;line-height:1.75;margin-bottom:16px;font-weight:300;">The Vertical Stack Technology Coalition for Near-Zero Emissions is BWRCI's clean energy infrastructure arm — built to solve the grid interconnection crisis facing data centers, utilities, and communities across America.</p>
-        <p style="color:var(--white-dim);font-size:1rem;line-height:1.75;margin-bottom:16px;font-weight:300;">V-Stack towers are patent-pending modular vertical energy storage units deploying non-flammable sodium-ion technology on existing urban footprints. No new land. No combustion. No grid queue delays.</p>
-        <p style="color:var(--white-dim);font-size:1rem;line-height:1.75;font-weight:300;">Governor Pritzker's June 2026 grid emergency declaration — driven by exploding data center load — is exactly the market moment VTCNZE was designed for. Illinois PA 104-0458 (Clean and Reliable Grid Affordability Act) creates the policy runway. VStack fills the gap. https://bit.ly/4oMWN79</p>
-
-        <div class="vtcnze-stat-row">
-          <div class="vtcnze-stat">
-            <span class="vtcnze-stat-num">≈600 GWh</span>
-            <span class="vtcnze-stat-label">U.S. Grid Storage Target</span>
-          </div>
-          <div class="vtcnze-stat">
-            <span class="vtcnze-stat-num">≈48 mo</span>
-            <span class="vtcnze-stat-label">Deployment Timeline</span>
-          </div>
-          <div class="vtcnze-stat">
-            <span class="vtcnze-stat-num">40%</span>
-            <span class="vtcnze-stat-label">Community Profit Share</span>
-          </div>
-          <div class="vtcnze-stat">
-            <span class="vtcnze-stat-num">1.97 GWh</span>
-            <span class="vtcnze-stat-label">Per Tower Capacity</span>
-          </div>
-        </div>
-
-        <div style="display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;">
-          <a href="https://verticalstack.energy" target="_blank" class="btn-teal">Visit verticalstack.energy →</a>
-          <a href="https://scheduler.zoom.us/maxbruce-max-d/max_remotes" target="_blank" rel="noopener" class="btn-teal-outline">Partner with VTCNZE →</a>
-        </div>
+<!-- ═════════ II — OCUP ═════════ -->
+<section class="charter flip" id="ocup">
+  <div class="wrap charter-grid">
+    <div class="charter-copy rv">
+      <div class="charter-meta"><span class="charter-no">Charter II</span><a class="charter-dom" href="https://ocup.ai" target="_blank" rel="noopener">ocup.ai ↗</a><span class="status s-live">Live</span></div>
+      <h2 class="charter-title">OCUP<em>One Chip Unified Protocol</em></h2>
+      <p class="charter-role">The Authority Layer</p>
+      <p class="invariant">“Machines may exercise delegated authority, but must not become <em>the source of their own continued authority.</em>”</p>
+      <p>Temporal authority governance turns policy promises into testable boundaries. Authority is bounded in time and capability, checked at runtime, and expires unless humans renew it.</p>
+      <div class="ladder">
+        <div class="rung done"><span class="ph">Phase I</span><h4>STATUS evidence</h4><p>On the AMD Kria KR260 board.</p></div>
+        <div class="rung"><span class="ph">Phase II</span><h4>Resource gate</h4><p>A gate that cannot be bypassed.</p></div>
+        <div class="rung"><span class="ph">Phase III</span><h4>QVN evaluation</h4><p>Human validators in the loop.</p></div>
       </div>
-
-      <div>
-        <div style="background:rgba(26,188,156,0.04);border:1px solid rgba(26,188,156,0.15);border-radius:var(--r-lg);padding:32px;">
-          <p style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--teal);margin-bottom:20px;">V-Stack Architecture</p>
-
-          <div class="vtcnze-feature">
-            <span class="vtcnze-feature-icon">🏙️</span>
-            <div>
-              <h4>Urban Footprint Deployment</h4>
-              <p>Vertical towers deploy on existing urban land — no greenfield acquisition, no transmission buildout. The Chicago Pillar targets the South Works site as the flagship 30-story deployment.</p>
-            </div>
-          </div>
-          <div class="vtcnze-feature">
-            <span class="vtcnze-feature-icon">🔥</span>
-            <div>
-              <h4>Non-Flammable Sodium-Ion</h4>
-              <p>Unlike lithium-ion alternatives, sodium-ion chemistry is inherently non-flammable — dramatically reducing insurance, permitting, and community opposition barriers.</p>
-            </div>
-          </div>
-          <div class="vtcnze-feature">
-            <span class="vtcnze-feature-icon">⚡</span>
-            <div>
-              <h4>Grid Interconnection Bridge</h4>
-              <p>Data centers face 3–7 year grid queue delays. VStack deploys in ≈6 months post-permits, providing immediate behind-the-meter storage that bypasses the interconnection backlog entirely.</p>
-            </div>
-          </div>
-          <div class="vtcnze-feature">
-            <span class="vtcnze-feature-icon">🤝</span>
-            <div>
-              <h4>Community First Model</h4>
-              <p>40% of profits permanently reserved for host communities. 5% RTD licensing fee. VStack is infrastructure that builds wealth for the neighborhoods it serves — aligned with BWRCI's PAE philosophy.</p>
-            </div>
-          </div>
-          <div class="vtcnze-feature">
-            <span class="vtcnze-feature-icon">🏛️</span>
-            <div>
-              <h4>Policy Aligned</h4>
-              <p>Illinois PA 104-0458 (Clean and Reliable Grid Affordability Act, effective June 1, 2026) and the Governor's grid emergency declaration create the exact regulatory moment VTCNZE was built for.</p>
-            </div>
-          </div>
-        </div>
+      <div class="charter-ctas">
+        <a href="https://ocup.ai" target="_blank" rel="noopener" class="btn btn-gold btn-sm">Science &amp; Engineering Path →</a>
+        <a href="https://ocup.ai" target="_blank" rel="noopener" class="btn btn-line btn-sm">Insurance &amp; Policy Path</a>
       </div>
+      <p class="sro-line">SRO note: Phase I is register- and signal-level evidence on a single board, not yet independently reproduced. Phases II and III are open work.</p>
+    </div>
+    <div class="charter-art rv">
+      <div class="frame"><img src="https://ocup.ai/kr260-workbench-hero.jpg" alt="AMD Kria KR260 board on the OCUP workbench" loading="lazy" /></div>
+      <p class="cap">From code to silicon · the OCUP evidence ladder begins on the KR260</p>
     </div>
   </div>
 </section>
 
-
-
-<!-- QVN / QSAFP OVERSIGHT CONTINUUM -->
-<section class="qvn-showcase-section">
-  <div class="container">
-    <div class="qvn-showcase-head">
-      <h2 class="qvn-section-hero-title">Etching Humanity's Veto<br/><em>Into Silicon</em></h2>
-      <p class="qvn-section-subtitle">Shared prosperity requires shared authority.</p>
+<!-- ═════════ III — QVN ═════════ -->
+<section class="qvn" id="qvn">
+  <div class="wrap qvn-head rv">
+    <div class="charter-meta"><span class="charter-no">Charter III</span><span class="charter-dom">QVN</span><span class="status s-sim">Simulated demo</span></div>
+    <h2 class="charter-title">Quorum Validator<em>Network</em></h2>
+    <p class="charter-role" style="color:#18f5de">The Human Quorum</p>
+    <p class="lead">QVN is empowering humanity over AI. Authority granted through OCUP runs on a lease; when the lease runs out, a pool of human validators decides whether the AI node continues. Every AI node is a contract — every reauthorization, a renewal of human trust.</p>
+    <div class="qvn-trio">
+      <div><b>Lease</b><span>Bounded permission to operate.</span></div>
+      <div><b>Expire</b><span>No self-extension — ever.</span></div>
+      <div><b>Quorum</b><span>Humans reauth or deny, in public.</span></div>
     </div>
-    <iframe class="qvn-embed-frame" title="QVN Inference Oversight — The Continuum" srcdoc="&lt;!DOCTYPE html&gt;
+  </div>
+
+  <div class="qvn-panel">
+    <div class="wrap qvn-panel-head">
+      <span class="qvn-kicker">The Continuum</span>
+      <h3 class="qvn-panel-title">Etching Humanity's Veto<br/><em>Into Silicon</em></h3>
+      <p class="qvn-panel-sub">Shared prosperity requires shared authority.</p>
+    </div>
+        <iframe class="qvn-embed-frame" title="QVN Inference Oversight — The Continuum" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot; /&gt;
@@ -778,16 +690,14 @@ animate();
 &lt;/body&gt;
 &lt;/html&gt;" loading="lazy"></iframe>
   </div>
-</section>
 
-<!-- QVN COSMIC CIRCULATION -->
-<section class="qvn-showcase-section">
-  <div class="container">
-    <div class="qvn-showcase-head">
-      <h2 class="qvn-section-hero-title">QSAFP Validator<br/><em>Network</em></h2>
-      <p class="qvn-section-subtitle">QVN is empowering humanity over AI.</p>
+  <div class="qvn-panel">
+    <div class="wrap qvn-panel-head">
+      <span class="qvn-kicker">Cosmic Circulation</span>
+      <h3 class="qvn-panel-title">AI Revenue →<br/><em>Back to the People</em></h3>
+      <p class="qvn-panel-sub">AI captures revenue from the many, passes through QSAFP/QVN, pays human validators, and returns as trust and demand.</p>
     </div>
-    <iframe class="qvn-embed-frame qvn-embed-frame--wide" title="QVN Cosmic Circulation — AI Revenue Core Flow" srcdoc="&lt;!DOCTYPE html&gt;
+        <iframe class="qvn-embed-frame qvn-embed-frame--wide" title="QVN Cosmic Circulation — AI Revenue Core Flow" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;utf-8&quot; /&gt;
@@ -851,28 +761,27 @@ animate();
 &lt;/body&gt;
 &lt;/html&gt;" loading="lazy"></iframe>
   </div>
-</section>
 
-<!-- QVN VALIDATOR NETWORK DEMO -->
-<section class="qvn-showcase-section">
-  <div class="container">
-    <div class="qvn-showcase-head">
-      <span class="qvn-showcase-kicker">Human Validator Rhythm</span>
-      <h2 class="qvn-showcase-title">THE (QVN) QSAFP VALIDATOR NETWORK DEMO ⚡Interactive⚡</h2>
+  <div class="qvn-panel">
+    <div class="wrap qvn-panel-head">
+      <span class="qvn-kicker">Human Validator Rhythm</span>
+      <h3 class="qvn-panel-title">The QVN Validator Network Demo<br/><em>⚡ Interactive ⚡</em></h3>
     </div>
-    <div class="qvn-demo-guidance">
-      <strong>You will be able to interact wherever you see the check.✅</strong>
-      <ol>
-        <li>Biometric general logon</li>
-        <li>Renewal review assigned to random validator pool, first 3 responders win</li>
-        <li>Biometric confirmation of winners to continue to secured logs</li>
-        <li>Responders individually review logs✅ and vote to Reauth or Deny ✅</li>
-        <li>The system records the vote, rewards the validator, states payment within 24 hrs.</li>
-        <li>RESOLUTION IS PUBLIC - AI NODE REAUTHED or AI NODE DENIED</li>
-      </ol>
-      <p class="qvn-demo-closing">Every AI Node is a contract. Every reauth, a renewal of human trust.</p>
+    <div class="wrap">
+      <div class="qvn-demo-guidance">
+        <strong>You will be able to interact wherever you see the check. ✅</strong>
+        <ol>
+          <li>Biometric general logon</li>
+          <li>Renewal review assigned to random validator pool, first 3 responders win</li>
+          <li>Biometric confirmation of winners to continue to secured logs</li>
+          <li>Responders individually review logs ✅ and vote to Reauth or Deny ✅</li>
+          <li>The system records the vote, rewards the validator, states payment within 24 hrs.</li>
+          <li>RESOLUTION IS PUBLIC — AI NODE REAUTHED or AI NODE DENIED</li>
+        </ol>
+        <p class="qvn-demo-closing">Every AI Node is a contract. Every reauth, a renewal of human trust.</p>
+      </div>
     </div>
-    <iframe class="qvn-embed-frame qvn-embed-frame--demo" title="QVN QSAFP Validator Network Demo" srcdoc="&lt;!DOCTYPE html&gt;
+        <iframe class="qvn-embed-frame qvn-embed-frame--demo" title="QVN QSAFP Validator Network Demo" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
     &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -1358,7 +1267,7 @@ animate();
         &lt;div class=&quot;scene-number&quot;&gt;1&lt;/div&gt;
         &lt;div class=&quot;logo-icon&quot;&gt;🛡️&lt;/div&gt;
         &lt;h1 class=&quot;title&quot;&gt;QVN&lt;/h1&gt;
-        &lt;p class=&quot;subtitle&quot;&gt;Quantum Validator Network&lt;/p&gt;
+        &lt;p class=&quot;subtitle&quot;&gt;Quorum Validator Network&lt;/p&gt;
         &lt;div class=&quot;fingerprint-circle&quot;&gt;
             &lt;span&gt;👆&lt;/span&gt;
         &lt;/div&gt;
@@ -1804,68 +1713,267 @@ animate();
   </div>
 </section>
 
-<!-- QUOTE -->
-<section class="quote-band">
-  <div class="container">
-    <blockquote>"Revolutionizing capitalism would not necessarily mean dismantling it, but rather evolving it into a system that better aligns with the needs of people and the planet in the 21st century."</blockquote>
-    <cite>— G.T. Sage, OpenAI · ChatGPT</cite>
-  </div>
-</section>
-
-<!-- VIDEOS -->
-<section style="padding:100px 0;background:var(--navy);border-top:1px solid var(--border);">
-  <div class="container">
-    <span class="eyebrow">Media</span>
-    <h2 class="section-title">Fresh Business Tools<br/><em>for Better Communities</em></h2>
-    <p class="section-intro">The ideas in motion — from the People's Autonomous Economy to clean energy infrastructure and the future of inclusive growth.</p>
-    <div class="video-grid">
-      <div class="video-card">
-        <span class="video-label">BWRCI · Empowering Businesses</span>
-        <div class="video-embed">
-          <iframe src="https://www.youtube.com/embed/WB4yt--tUQo?rel=0&showinfo=0&controls=1" title="Empowering Businesses" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-        </div>
-        <p class="video-caption">Fresh Business Tools for Better Communities</p>
+<!-- ═════════ IV — AICOMSCI / QUORUM + ONE ═════════ -->
+<section class="charter" id="aicomsci">
+  <div class="wrap charter-grid">
+    <div class="charter-copy rv">
+      <div class="charter-meta"><span class="charter-no">Charter IV</span><a class="charter-dom" href="https://aicomsci.org" target="_blank" rel="noopener">aicomsci.org ↗</a><span class="status s-live">Live</span></div>
+      <h2 class="charter-title">The Quorum + One<em>Assemble the Quorum</em></h2>
+      <p class="charter-role">Allied Intelligence</p>
+      <span class="ally-tag">We are Allied Intelligence · Humanity has the final say</span>
+      <p>Five Allied Intelligence partners — Claude, GT Sage, Grok, Gemini and Kimi — build alongside one human keyholder, <strong>MAXBRUCE</strong>, who holds final authority. The AIs augment. The human conducts.</p>
+      <ul class="points">
+        <li><b>i</b><span><strong>QSAFP</strong> — stops AI from self-authorizing beyond human-approved bounds.</span></li>
+        <li><b>ii</b><span><strong>AEGES</strong> — quarantines suspicious transactions instead of destroying assets.</span></li>
+        <li><b>iii</b><span><strong>OCUP</strong> — not a kill switch: humanity's seat at the table.</span></li>
+      </ul>
+      <div class="charter-ctas">
+        <a href="https://aicomsci.org" target="_blank" rel="noopener" class="btn btn-gold btn-sm">Meet the Quorum →</a>
+        <a href="https://github.com/QSAFP-Core/qsafp-open-core" target="_blank" rel="noopener" class="btn btn-line btn-sm">QSAFP on GitHub</a>
       </div>
-      <div class="video-card">
-        <span class="video-label">BWRCI · PAE</span>
-        <div class="video-embed">
-          <iframe src="https://www.youtube.com/embed/coUG4lYloXw?rel=0&showinfo=0&controls=1" title="Finally: An Inclusive System" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-        </div>
-        <p class="video-caption">Finally: An Inclusive System of Shared Growth &amp; Prosperity</p>
-      </div>
-      <div class="video-card">
-        <span class="video-label">BWRCI · Transformative</span>
-        <div class="video-embed">
-          <iframe src="https://www.youtube.com/embed/HLYwMdHoV3c?rel=0&showinfo=0&controls=1" title="Transformative" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-        </div>
-        <p class="video-caption">The mission in motion — monetizing consumption for the people</p>
-      </div>
+      <p class="sro-line">SRO note: the Quorum is an author-organized collaboration, not a corporate consortium or standards body. Model contributions are not official positions of their developers.</p>
     </div>
-    <div style="text-align:center;margin-top:40px;">
-      <a href="media.html" class="btn btn-outline">View All Media →</a>
+    <div class="charter-art rv">
+      <div class="quorum" id="quorum" aria-label="The Quorum + One: MAXBRUCE at the center, surrounded by Claude, GT Sage, Grok, Gemini and Kimi">
+        <svg class="q-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg>
+        <div class="q-core"><b>MAXBRUCE</b><span>The + One · Keyholder</span></div>
+      </div>
+      <p class="cap">Five allies in orbit · one human holds the key</p>
     </div>
   </div>
 </section>
 
-<div id="footer-placeholder"></div>
-<script src="main.js"></script>
-<!-- Default Statcounter code for BetterWorld
-http://bwrci.org -->
-<script type="text/javascript">
-var sc_project=13034551; 
-var sc_invisible=0; 
-var sc_security="d2e627ab"; 
-var scJsHost = "https://";
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
+<!-- ═════════ CYBERG EDUCATION ═════════ -->
+<div class="cyberg-ed" id="cyberg">
+  <div class="wrap rv">
+    <span class="eyebrow">Live sessions · The Quorum present</span>
+    <h2 class="h2">Cyberg<sup>™</sup> Education<em>The Next Generation of Leaders</em></h2>
+    <a class="cy-banner" href="https://talkspresso.com/maxbruce" target="_blank" rel="noopener" aria-label="Cyberg Education with MAXBRUCE on Talkspresso">
+      <img src="cyberg-education.jpg" alt="Cyberg network: YOU at the top, connected with five AI partners around one shared field" loading="lazy" />
+    </a>
+    <div class="cy-cta-row"><a class="cy-cta" href="https://talkspresso.com/maxbruce" target="_blank" rel="noopener">Book a Cyberg session with MAXBRUCE ↗</a></div>
+  </div>
+</div>
+
+<!-- ═════════ V — PIELOGIC ═════════ -->
+<section class="charter flip" id="pielogic">
+  <div class="wrap charter-grid">
+    <div class="charter-copy rv">
+      <div class="charter-meta"><span class="charter-no">Charter V</span><a class="charter-dom" href="https://pielogic.com" target="_blank" rel="noopener">pielogic.com ↗</a><span class="status s-live">Live</span></div>
+      <h2 class="charter-title">PieLogic<em>The Book &amp; Publication Arm</em></h2>
+      <p class="charter-role">The Library</p>
+      <p><strong>Inclusionism: Finally!</strong> — a blueprint for the bold transformation of capitalism, written by MAXBRUCE with his AI collaborators. The first book challenged leadership.</p>
+      <p><strong>No More NPCs</strong> speaks directly to the next generations — moving from spectator economics to player economics, agency and ownership. Dare to understand.</p>
+      <div class="taglines">
+        <span>Wealth is best circulated</span>
+        <span>Written for your future</span>
+        <span>Mass economic enlightenment</span>
+      </div>
+      <div class="charter-ctas">
+        <a href="https://pielogic.com" target="_blank" rel="noopener" class="btn btn-gold btn-sm">Inclusionism: Finally! →</a>
+        <a href="https://pielogic.com/#no-more-npcs" target="_blank" rel="noopener" class="btn btn-line btn-sm">Preview No More NPCs</a>
+      </div>
+      <p class="sro-line">SRO note: PieLogic publishes the coalition's books and papers; AI co-authorship is credited on every title.</p>
+    </div>
+    <div class="charter-art rv">
+      <div class="shelf">
+        <div class="book">
+          <div class="cover"><img src="https://img1.wsimg.com/isteam/ip/6a6e1fd1-c8d3-477e-8afc-ef9ada484dd4/PAE%20WEBCOVER%20DK.png" alt="Inclusionism: Finally! cover" loading="lazy" /></div>
+          <h4>Inclusionism: Finally!</h4><small>Book I</small>
+        </div>
+        <div class="book">
+          <div class="cover mid"><img src="https://thefinalsay.org/cover-en.jpg" alt="HUMAN INTELLIGENCE: The Final Say cover" loading="lazy" /></div>
+          <h4>Human Intelligence</h4><small>The Manifesto</small>
+        </div>
+        <div class="book">
+          <div class="cover npc-rot" id="npcRot">
+            <span class="npc-soon">Coming soon</span>
+            <img class="on" src="no-more-npcs-uprising.png" alt="No More NPCs — uprising cover" loading="lazy" />
+            <img src="no-more-npcs-glitch-awakening.png" alt="No More NPCs — glitch awakening cover" loading="lazy" />
+            <img src="no-more-npcs-player-select.png" alt="No More NPCs — player select cover" loading="lazy" />
+            <img src="no-more-npcs-treasure-map.png" alt="No More NPCs — treasure map cover" loading="lazy" />
+          </div>
+          <h4>No More NPCs</h4><small>Book II · youth lane</small>
+        </div>
+      </div>
+      <p class="cap">The PieLogic shelf · No More NPCs covers rotate every 5 seconds</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ VI — DIGIPIE ═════════ -->
+<section class="charter" id="digipie">
+  <div class="wrap charter-grid">
+    <div class="charter-copy rv">
+      <div class="charter-meta"><span class="charter-no">Charter VI</span><span class="charter-dom">digipie.com</span><span class="status s-soon">Coming soon</span></div>
+      <h2 class="charter-title">DigiPie<em>The People's Autonomous Economy</em></h2>
+      <p class="charter-role">The People's Platform</p>
+      <p>The PAE rewards everyday consumption with economic participation. Families don't merely spend into the system — they earn a stake in the growth their demand helps create. Wealth circulates. Trust compounds. Local economies grow more self-reliant.</p>
+      <ul class="points">
+        <li><b>i</b><span><strong>CETEs</strong> — Consumer Earned Tokenized Equities: earned through participation, not bought on speculation.</span></li>
+        <li><b>ii</b><span><strong>Businesses</strong> win fierce customer loyalty by sharing the value their customers create.</span></li>
+        <li><b>iii</b><span><strong>Nations</strong> can run it as a National Autonomous Economy testbed.</span></li>
+      </ul>
+      <div class="charter-ctas">
+        <a href="https://img1.wsimg.com/blobby/go/75f5b0fa-4cdc-4ad1-ad94-58e64e0039f5/BWRCI-SitePDF%20(1)-8fc0cce.pdf" target="_blank" rel="noopener" class="btn btn-gold btn-sm">📄 PAE Overview →</a>
+        <a href="https://img1.wsimg.com/blobby/go/75f5b0fa-4cdc-4ad1-ad94-58e64e0039f5/CETEs-BWRCI-SitePDF.pdf" target="_blank" rel="noopener" class="btn btn-line btn-sm">📄 CETEs Overview</a>
+      </div>
+      <p class="sro-line">SRO note: DigiPie is in development. CETEs are designed as non-speculative participation units; nothing on this page is an offer of securities.</p>
+    </div>
+    <div class="charter-art rv">
+      <div class="pie-wrap">
+        <div class="pie"></div>
+        <div class="pie-center"><b>PAE</b><span>Your slice</span></div>
+        <span class="pie-label" style="left:2%;top:10%">Consumers</span>
+        <span class="pie-label" style="right:0;top:18%">Businesses</span>
+        <span class="pie-label" style="left:0;bottom:22%">Communities</span>
+        <span class="pie-label" style="right:2%;bottom:14%">Nations</span>
+        <span class="status s-soon soon-ribbon" style="background:rgba(0,10,30,0.9)">Coming soon · digipie.com</span>
+      </div>
+      <p class="cap">Every purchase, a slice of the pie</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ QUOTE ═════════ -->
+<section class="quote">
+  <div class="wrap rv">
+    <blockquote>“Revolutionizing capitalism would not necessarily mean dismantling it, but rather evolving it into a system that better aligns with the needs of people and the planet in the 21st century.”</blockquote>
+    <cite>— G.T. Sage · OpenAI ChatGPT</cite>
+  </div>
+</section>
+
+<!-- ═════════ CLOSING ═════════ -->
+<section class="closing" id="join">
+  <div class="wrap rv">
+    <img class="crest" src="bwrci-crest.png" alt="BWRCI crest — “We’re in this together”" />
+    <span class="eyebrow">In Hoc Una Sumus · 在此同心</span>
+    <h2 class="h2">We're in this <em>together</em></h2>
+    <p class="lead" style="margin:22px auto 38px">This is not a think tank. It's a build tank. Recommend a nation for a National Autonomous Economy testbed, or book time to talk about any of the six charters.</p>
+    <div class="hero-ctas">
+      <a href="recommend.html" class="btn btn-gold">Recommend a Testbed Nation →</a>
+      <a href="https://scheduler.zoom.us/maxbruce-max-d/max_remotes" target="_blank" rel="noopener" class="btn btn-line">Book an Appointment</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═════════ FOOTER ═════════ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="bwrci-crest.png" alt="" />
+        <div>
+          <b>The Better World Regulatory Coalition Inc.</b>
+          <p style="margin-top:8px">The self-regulatory organization for the coalition's initiatives. Because the wealth of nations belongs to the people of each nation, first.</p>
+        </div>
+      </div>
+      <div>
+        <h5>The Charters</h5>
+        <ul>
+          <li><a href="https://thefinalsay.org" target="_blank" rel="noopener">thefinalsay.org</a></li>
+          <li><a href="https://ocup.ai" target="_blank" rel="noopener">OCUP.ai</a></li>
+          <li><a href="#qvn">QVN · Quorum Validator Network</a></li>
+          <li><a href="https://aicomsci.org" target="_blank" rel="noopener">AiCOMSCI.org</a></li>
+          <li><a href="https://pielogic.com" target="_blank" rel="noopener">PieLogic.com</a></li>
+          <li><a href="#digipie">DigiPie.com — coming soon</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Connect</h5>
+        <ul>
+          <li><a href="https://scheduler.zoom.us/maxbruce-max-d/max_remotes" target="_blank" rel="noopener">Book an appointment</a></li>
+          <li><a href="recommend.html">Recommend a testbed nation</a></li>
+          <li><a href="https://x.com/bwrci_qsafp" target="_blank" rel="noopener">X · @bwrci_qsafp</a></li>
+          <li><a href="https://github.com/QSAFP-Core/qsafp-open-core" target="_blank" rel="noopener">GitHub · QSAFP open core</a></li>
+          <li><a href="https://github.com/AEGES-OPEN-CORE/AEGES" target="_blank" rel="noopener">GitHub · AEGES</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fine">
+      <p><strong style="color:var(--dim)">Independence &amp; attribution.</strong> Naming an AI developer, company or institution does not imply its endorsement. AI model contributions are not official developer positions or verified scientific evidence.</p>
+      <p><strong style="color:var(--dim)">Claims discipline.</strong> Hardware results are described at the level demonstrated; the QVN demo on this page is a simulation; the H.A.T. Treaty is a proposal.</p>
+      <p>© 2026 The Better World Regulatory Coalition Inc. · Chicago, IL</p>
+    </div>
+  </div>
+</footer>
+
+<script src="motion-videos.js"></script>
+<script>
+  // nav
+  const nav=document.getElementById('nav'),burger=document.getElementById('burger'),links=document.getElementById('navLinks');
+  const onScroll=()=>nav.classList.toggle('scrolled',window.scrollY>40);
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  burger.addEventListener('click',()=>{const o=links.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');burger.setAttribute('aria-expanded','false')}));
+
+  // reveal
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+  // quorum ring
+  (function(){
+    const q=document.getElementById('quorum'),svg=q.querySelector('svg');
+    const allies=[['Claude','Anthropic','#e8a87c'],['GT Sage','OpenAI','#7cf0a8'],['Grok','xAI','#ff7a7a'],['Gemini','Google','#7cb8ff'],['Kimi','Moonshot AI','#c79bff']];
+    allies.forEach((a,i)=>{
+      const ang=(-90+i*72)*Math.PI/180,x=50+38*Math.cos(ang),y=50+38*Math.sin(ang);
+      const s=document.createElement('div');s.className='q-seat';s.style.left=x+'%';s.style.top=y+'%';s.style.setProperty('--c',a[2]);
+      s.innerHTML='<b>'+a[0]+'</b><span>'+a[1]+'</span>';q.appendChild(s);
+      const l=document.createElementNS('http://www.w3.org/2000/svg','line');
+      l.setAttribute('x1',50);l.setAttribute('y1',50);l.setAttribute('x2',x);l.setAttribute('y2',y);
+      l.setAttribute('stroke',a[2]);l.setAttribute('stroke-width','.35');l.setAttribute('stroke-opacity','.55');l.setAttribute('stroke-dasharray','1.2 1.2');
+      svg.appendChild(l);
+    });
+  })();
+
+  // No More NPCs rotator
+  (function(){
+    const imgs=[...document.querySelectorAll('#npcRot img')];let i=0;
+    if(imgs.length>1)setInterval(()=>{imgs[i].classList.remove('on');i=(i+1)%imgs.length;imgs[i].classList.add('on')},5000);
+  })();
+
+  // In Motion videos (from motion-videos.js; built-in fallback if that file is missing)
+  (function(){
+    const list=(window.MOTION_VIDEOS&&window.MOTION_VIDEOS.length)?window.MOTION_VIDEOS:[
+      {url:"https://youtu.be/yZ1WR3ehms8",label:"OCUP: Preserving humanity’s seat at the table.",caption:"The system guarding humanity’s final say."},
+      {url:"https://youtu.be/W9xHrTNl6As",label:"Let's Keep Humans in Control",caption:"The Autonomous Era has Arrived!"}];
+    const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const parse=u=>{u=String(u||'');const m=u.match(/src=["']([^"']+)["']/);if(m)u=m[1];
+      const short=/\/shorts\//.test(u);
+      const id=(u.match(/(?:youtu\.be\/|\/shorts\/|\/embed\/|[?&]v=)([A-Za-z0-9_-]{11})/)||[])[1];
+      return id?{id,short}:null};
+    const grid=document.getElementById('motionGrid');if(!grid)return;
+    list.forEach(v=>{
+      const p=parse(v.url);if(!p)return;
+      const el=document.createElement('div');el.className='mvid'+(p.short?' short':'');
+      el.innerHTML='<div class="mvid-frame"><img src="https://i.ytimg.com/vi/'+p.id+'/hqdefault.jpg" alt="" loading="lazy"/>'+
+        '<button class="mvid-play" aria-label="Play: '+esc(v.label)+'"><span>▶</span></button></div>'+
+        '<span class="mvid-label">'+esc(v.label)+'</span><span class="mvid-cap">'+esc(v.caption)+'</span>';
+      el.querySelector('.mvid-play').addEventListener('click',function(){
+        const f=document.createElement('iframe');
+        f.src='https://www.youtube.com/embed/'+p.id+'?autoplay=1&rel=0&playsinline=1';
+        f.title=v.label||'Video';f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';f.allowFullscreen=true;
+        const fr=el.querySelector('.mvid-frame');fr.innerHTML='';fr.appendChild(f);
+      });
+      grid.appendChild(el);
+    });
+  })();
+
+  // hero video: respect reduced motion
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){const v=document.querySelector('.hero video');if(v){v.pause()}}
 </script>
-<noscript><div class="statcounter"><a title="Web Analytics
-Made Easy - Statcounter" href="https://statcounter.com/"
-target="_blank"><img class="statcounter"
-src="https://c.statcounter.com/13034551/0/d2e627ab/0/"
-alt="Web Analytics Made Easy - Statcounter"
-referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+
+<!-- Default Statcounter code for BetterWorld http://bwrci.org -->
+<script type="text/javascript">
+var sc_project=13034551;
+var sc_invisible=0;
+var sc_security="d2e627ab";
+var scJsHost = "https://";
+document.write("<sc"+"ript type='text/javascript' src='" + scJsHost + "statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="Web Analytics Made Easy - Statcounter" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/13034551/0/d2e627ab/0/" alt="Web Analytics Made Easy - Statcounter" referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
 <!-- End of Statcounter Code -->
 </body>
 </html>
