@@ -181,6 +181,14 @@
       .charter.flip .charter-art{order:0}
     }
 
+    /* ── CYBERG LEAD-IN (above Charter I) ── */
+    .lead-in{padding:96px 0 0;text-align:center;border-top:1px solid var(--line-soft);background:radial-gradient(ellipse 60% 70% at 50% 55%, rgba(212,175,95,0.07), transparent 100%), var(--ink)}
+    .lead-in q{display:block;font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(1.8rem,4vw,3.2rem);line-height:1.2;color:var(--white);max-width:980px;margin:0 auto;quotes:"\201C" "\201D"}
+    .lead-in q em{color:var(--gold-hi);font-style:italic}
+    .lead-in q sup{font-size:.4em;font-style:normal;vertical-align:super;color:var(--gold)}
+    .lead-in .rule{margin:34px auto 0}
+    .lead-in + .charter{border-top:none;padding-top:80px;background:var(--ink)}
+
     /* art frames */
     .frame{position:relative;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,0.55),0 0 80px rgba(212,175,95,0.08)}
     .cap{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;color:var(--muted);margin-top:12px;text-align:center}
@@ -437,6 +445,14 @@
     </div>
   </div>
 </section>
+
+<!-- ═════════ CYBERG LEAD-IN ═════════ -->
+<div class="lead-in">
+  <div class="wrap rv">
+    <q>What if the next generation of leaders are <em>Cybergs</em><sup>™</sup>?</q>
+    <div class="rule"></div>
+  </div>
+</div>
 
 <!-- ═════════ I — THE FINAL SAY ═════════ -->
 <section class="charter" id="finalsay">
